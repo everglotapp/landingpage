@@ -1,15 +1,16 @@
 <script lang="ts">
+    import { setContext } from "svelte";
 	import MainNav from '../comp/layout/MainNav.svelte';
 
 	export let segment: string | undefined;
+	setContext("brand", "<Brand>");
 </script>
 
 <style>
 	main {
 		position: relative;
-		max-width: 56em;
 		background-color: white;
-		padding: 2em;
+		padding: 2rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}
