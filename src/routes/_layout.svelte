@@ -1,23 +1,39 @@
 <script lang="ts">
-    import { setContext } from "svelte";
 	import MainNav from '../comp/layout/MainNav.svelte';
 
 	export let segment: string | undefined;
-	setContext("brand", "<Brand>");
+
+	import { scale } from "svelte/transition";
+  const timeout = 150;
+  let show = true;
+
+  const change = () => {
+    show = !show;
+  };
+
+  $: change(segment);
 </script>
 
 <style>
 	main {
 		position: relative;
 		background-color: white;
-		padding: 2rem;
-		margin: 0 auto;
 		box-sizing: border-box;
 	}
 </style>
 
 <MainNav {segment}/>
 
-<main>
-	<slot></slot>
-</main>
+{#if show}
+  <main
+    in:scale={{ duration: timeout, delay: timeout }}
+    out:scale={{ duration: timeout }}>
+    <slot />
+  </main>
+{:else}
+  <main
+    in:scale={{ duration: timeout, delay: timeout }}
+    out:scale={{ duration: timeout }}>
+    <slot />
+  </main>
+{/if}

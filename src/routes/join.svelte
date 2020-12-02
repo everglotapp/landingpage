@@ -10,11 +10,11 @@
 </script>
 
 <svelte:head>
-	<title>Login to {"<"}Brand{">"}</title>
+	<title>Join {"<"}Brand{">"}</title>
 </svelte:head>
 
 <div class="container px-4 mx-auto my-16 max-w-sm">
-	<PageTitle>Login to {"<"}Brand{">"}</PageTitle>
+	<PageTitle>Join {"<"}Brand{">"}</PageTitle>
 
 	<form on:submit|preventDefault="{handleSubmit}" method="post" class="bg-white my-8">
 		<div class="flex flex-col w-full mb-2">
@@ -28,12 +28,12 @@
 		<button
 			type="submit"
 			class="mt-5 py-3 px-10 w-full mb-1 bg-primary hover:bg-primary-bitlight text-white rounded-xl font-bold"
-		>Login</button>
+		>Create a new account</button>
 		<ButtonLarge
-			href="join"
+			href="login"
 			variant={Variant.SECONDARY}
 			className="w-full justify-center"
-		>I don't have an account</ButtonLarge>
+		>I already have an account</ButtonLarge>
 	</form>
 </div>
 

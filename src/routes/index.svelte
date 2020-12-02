@@ -1,22 +1,42 @@
 <script lang="ts">
-    import { getContext } from "svelte";
-	import PageTitle from "../comp/typography/PageTitle.svelte";
+	import ButtonLarge, { Variant } from "../comp/util/ButtonLarge.svelte";
 </script>
 
 <svelte:head>
-	<title>{getContext("brand")}</title>
+	<title>{"<"}Brand{">"}</title>
 </svelte:head>
 
-<div class="flex bg-primary-lightest">
-    <div class="flex flex-row items-center container mx-auto py-4">
-        <div class="w-1/2">
-    {getContext("brand")} takes the stress away from learning a language.
+<!-- Header -->
+<section class="bg-primary-lightest shadow-sm">
+    <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-16">
+        <div class="md:w-1/2 px-3 mb-4 md:mb-0">
+            <p class="text-lg font-bold mb-6 md:mb-3">Learn languages together with fun stories.</p>
+            <p class="md:pr-16">We <span role="img" aria-label="red heart" alt="love">❤️</span> all languages and strongly believe that they shouldn't be scary. Go as far as you want whenever you feel ready.</p>
         </div>
-        <div class="w-1/2">
+        <div class="md:w-1/2">
             <div class="p-6">
-                <a class="py-4 px-10 inline-flex bg-primary text-white rounded-xl font-bold shadow-md hover:shadow-lg cursor-pointer" href="login">Join now!</a>
-                <a class="py-4 px-10 inline-flex text-primary rounded-xl font-bold text-sm cursor-pointer" href="login">Login</a>
+                <ButtonLarge
+                    href="join"
+                    variant={Variant.PRIMARY}
+                    className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
+                >Join now!</ButtonLarge>
+                <ButtonLarge
+                    href="login"
+                    variant={Variant.SECONDARY}
+                    className="w-full justify-center md:w-auto"
+                >Login</ButtonLarge>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Features -->
+<section class="bg-gray-lightest py-4">
+    <div class="flex container mx-auto py-8 px-8">
+        <div>
+            <p class="mb-2">Members of {"<"}Brand{">"} are building the world's largest collection of exciting lessons.</p>
+        </div>
+
+        <p>The most successful way to learn anything is to like doing it.</p>
+    </div>
+</section>

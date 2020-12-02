@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { getContext } from "svelte";
 	export let segment: string | undefined;
 </script>
 
@@ -22,18 +21,25 @@
 
 	a {
 		display: flex;
-		padding: .75rem 1rem;
+		padding: 1rem 1rem;
 		text-decoration: none;
 	}
 </style>
 
-<nav class="flex px-2">
+<nav class="flex container mx-auto px-2">
 	<ul class="flex flex-1">
 		<li>
-			<a aria-current="{segment === undefined ? 'page' : undefined}" class="italic" href=".">{getContext("brand")}</a>
+			<a
+				aria-current="{segment === undefined ? 'page' : undefined}"
+				class="italic"
+				href="."
+			>{"<"}Brand{">"} logo</a>
 		</li>
 		<li class="ml-auto">
-			<a aria-current="{segment === 'login' ? 'page' : undefined}" href="login">Login</a>
+			<a
+				aria-current="{segment === 'login' ? 'page' : undefined}"
+				href="login"
+			>Login</a>
 		</li>
 	</ul>
 </nav>
