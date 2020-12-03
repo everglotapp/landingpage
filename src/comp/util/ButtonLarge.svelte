@@ -1,18 +1,15 @@
 <script context="module" lang="ts">
-    export enum Variant {
-        PRIMARY,
-        SECONDARY,
-    };
-    const classesByVariant = {
-        [Variant.PRIMARY]: "bg-primary hover:bg-primary-bitlight text-white shadow-md",
-        [Variant.SECONDARY]: "border hover:bg-gray-lightest border-primary text-primary",
+    export type Variant = 'FILLED' | 'OUTLINED';
+    const classes: Record<Variant, string> = {
+        FILLED: "bg-primary hover:bg-primary-bitlight text-white shadow-md",
+        OUTLINED: "border hover:bg-gray-lightest border-primary text-primary",
     };
 </script>
 
 <script lang="ts">
     export let href: string = "";
-    export let variant: Variant = Variant.PRIMARY;
-    $: variantClasses = classesByVariant[variant];
+    export let variant: Variant = "FILLED";
+    $: variantClasses = classes[variant];
     export let className: string = "";
 </script>
 

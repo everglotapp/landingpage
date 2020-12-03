@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ButtonLarge, { Variant } from "../comp/util/ButtonLarge.svelte";
+    import ButtonLarge from "../comp/util/ButtonLarge.svelte";
 </script>
 
 <svelte:head>
@@ -14,15 +14,14 @@
             <p class="md:pr-16">We <span role="img" aria-label="red heart" alt="love">❤️</span> all languages and strongly believe that they shouldn't be scary. Go as far as you want whenever you feel ready.</p>
         </div>
         <div class="md:w-1/2">
-            <div class="p-6">
+            <div class="p-6 z-10">
                 <ButtonLarge
                     href="join"
-                    variant={Variant.PRIMARY}
                     className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
                 >Join now!</ButtonLarge>
                 <ButtonLarge
                     href="login"
-                    variant={Variant.SECONDARY}
+                    variant=OUTLINED
                     className="w-full justify-center md:w-auto"
                 >Login</ButtonLarge>
             </div>

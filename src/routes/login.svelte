@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PageTitle from "../comp/typography/PageTitle.svelte";
-	import ButtonLarge, {Variant} from "../comp/util/ButtonLarge.svelte";
+	import ButtonLarge from "../comp/util/ButtonLarge.svelte";
 
 	const handleSubmit = (event: Event) => {
 		console.log(event);
@@ -27,11 +27,12 @@
 		</div>
 		<button
 			type="submit"
+			variant=FILLED
 			class="mt-5 py-3 px-10 w-full mb-1 bg-primary hover:bg-primary-bitlight text-white rounded-xl font-bold"
 		>Login</button>
 		<ButtonLarge
 			href="join"
-			variant={Variant.SECONDARY}
+			variant=OUTLINED
 			className="w-full justify-center"
 		>I don't have an account</ButtonLarge>
 	</form>

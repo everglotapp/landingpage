@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PageTitle from "../comp/typography/PageTitle.svelte";
-	import ButtonLarge, {Variant} from "../comp/util/ButtonLarge.svelte";
+	import ButtonLarge from "../comp/util/ButtonLarge.svelte";
 
 	const handleSubmit = (event: Event) => {
 		console.log(event);
@@ -31,7 +31,7 @@
 		>Create a new account</button>
 		<ButtonLarge
 			href="login"
-			variant={Variant.SECONDARY}
+			variant=OUTLINED
 			className="w-full justify-center"
 		>I already have an account</ButtonLarge>
 	</form>
