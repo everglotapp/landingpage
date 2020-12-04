@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    lang:
+        build:
+            context: .
+        ports:
+            - "80:3000"
+        restart: always
+        working_dir: /usr/src/app
