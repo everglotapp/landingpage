@@ -1,9 +1,9 @@
 <script lang="ts">
+	import { scale } from "svelte/transition";
 	import MainNav from '../comp/layout/MainNav.svelte';
 
 	export let segment: string | undefined;
 
-	import { scale } from "svelte/transition";
   const timeout = 150;
   let show = true;
 

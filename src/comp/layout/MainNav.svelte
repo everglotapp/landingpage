@@ -24,6 +24,10 @@
 		padding: 1rem 1rem;
 		text-decoration: none;
 	}
+
+	li:hover a {
+		@apply bg-gray-verylight;
+	}
 </style>
 
 <nav class="flex container mx-auto px-2">

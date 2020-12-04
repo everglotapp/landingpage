@@ -31,7 +31,7 @@
 		>Create a new account</button>
 		<ButtonLarge
 			href="login"
-			variant=OUTLINED
+			variant=TEXT
 			className="w-full justify-center"
 		>I already have an account</ButtonLarge>
 	</form>

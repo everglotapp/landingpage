@@ -1,10 +1,11 @@
 <script context="module" lang="ts">
     import { scale } from "svelte/transition";
 
-    export type Variant = "FILLED" | "OUTLINED";
+    export type Variant = "FILLED" | "OUTLINED" | "TEXT";
     const classes: Record<Variant, string> = {
-        FILLED: "bg-primary hover:bg-primary-bitlight text-white shadow-md focus:border-primary-light focus:bg-primary-light",
-        OUTLINED: "border hover:bg-gray-lightest border-primary text-primary focus:border-primary-lightest focus:bg-primary-lightest",
+        FILLED: "border border-primary bg-primary hover:bg-primary-bitlight text-white shadow-md focus:border-primary-light focus:bg-primary-light",
+        OUTLINED: "border border-primary hover:bg-gray-lightest text-primary focus:border-white focus:bg-white",
+        TEXT: "border border-transparent hover:bg-gray-lightest text-primary focus:bg-white focus:border-primary"
     };
 </script>
 
