@@ -30,13 +30,13 @@
     in:scale={{ duration: timeout, delay: timeout }}
     out:scale={{ duration: timeout }}>
     <slot />
-    <Footer />
   </main>
+  <Footer />
 {:else}
   <main
     in:scale={{ duration: timeout, delay: timeout }}
     out:scale={{ duration: timeout }}>
     <slot />
-    <Footer />
   </main>
+  <Footer />
 {/if}
