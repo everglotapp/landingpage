@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { fly } from "svelte/transition";
-
     let previousScrollTop: Number;
     let scrolledDown = false;
     const handleScroll = (e: any) => {
@@ -25,7 +23,7 @@
 
 <svelte:window on:scroll={handleScroll} />
 {#if !scrolledDown}
-    <div class="arrow hidden md:block" out:fly={{y: -200, delay: 300, duration: 800}}></div>
+    <div class="arrow hidden md:block"></div>
 {/if}
 
 <style>

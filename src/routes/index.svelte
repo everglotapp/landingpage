@@ -2,8 +2,8 @@
     import ButtonLarge from "../comp/util/ButtonLarge.svelte";
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte";
     import heart from "images/heart.svg";
-    import globe from "images/globe-cartoon.png"
     import notebook from "images/notebook.jpg";
+    import globe from "images/globe-cartoon.png";
 </script>
 
 <svelte:head>
@@ -39,12 +39,12 @@
 <!-- USP -->
 <section class="container mx-auto py-8 md:py-20 px-8 flex flex-col md:flex-row items-center">
     <div class="md:w-1/3 flex justify-center mb-8 sm:mb-0">
-        <img src={globe} alt="Globe" style="max-width: 220px" >
+        <img src={globe} alt="Globe" style="max-width: 220px" />
     </div>
 
     <div class="md:w-2/3">
-        <h3>We are excited about languages. But we can do better.</h3>
-        <p>Members of {"<"}Brand{">"} are building the world's largest collection of exciting lessons.</p>
+        <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
+        <p>Members of {"<"}Brand{">"} are building the world's largest collection of exciting, interactive lessons.</p>
         <p>They make the world a better place by helping others who are struggling.</p>
     </div>
 </section>
@@ -57,14 +57,14 @@
             <h3>Say goodbye to writer's block</h3>
             <p>Get inspired by our writing prompts or translate one of our existing stories.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>The most successful way to learn anything is to like doing it. Write about your favorite topic and choose what to share.</p>
+            <p>The best way to learn anything is to enjoy it. Write about your favorite places, foods or hobbies.</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Invite your friends</h3>
             <p>{"<"}Brand{">"} works even better with your tandem partners. You can also do lessons together.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>Seriously, the most successful way to learn anything is to actually enjoy doing it.</p>
+            <p>Make your stories as interactive as games! Choose for yourself who you want to share them with.</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
@@ -79,7 +79,8 @@
 
 
 <section id="footer-cta" class="bg-primary-lightest shadow-sm relative" style="--footer-cta-bg:url('')">
-    <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-24 relative">
+    <div class="flex flex-col md:flex-row md:items-center space-x-8 container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-24 relative">
+        <p>Writing with {"<"}Brand{">"} will be free forever!</p>
         <ButtonLarge
             href="join"
             className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
