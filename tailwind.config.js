@@ -43,6 +43,7 @@ module.exports = {
                     DEFAULT: "rgb(171, 174, 178)",
                     bitlight: "#c0ccda",
                     light: "#e0e6ed",
+                    verylight: "rgb(235, 240, 245)",
                     lightest: "#f9fafc",
                 },
             },

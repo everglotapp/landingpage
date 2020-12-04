@@ -13,7 +13,7 @@
 		content: '';
 		height: 2px;
 		display: block;
-		bottom: -1px;
+		bottom: 0;
 		left: 0;
 		right: 0;
 		@apply bg-accent;
