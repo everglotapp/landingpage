@@ -39,6 +39,12 @@
 				href="."
 			>{"<"}Brand{">"} logo</a>
 		</li>
+		<li>
+			<a
+				aria-current="{segment === 'try' ? 'page' : undefined}"
+				href="try"
+			>Try</a>
+		</li>
 		<li class="ml-auto">
 			<a
 				aria-current="{segment === 'pricing' ? 'page' : undefined}"

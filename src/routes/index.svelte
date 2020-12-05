@@ -23,9 +23,9 @@
         <div class="md:w-1/2">
             <div class="p-6 z-10">
                 <ButtonLarge
-                    href="join"
+                    href="try"
                     className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
-                >Join now!</ButtonLarge>
+                >Try now!</ButtonLarge>
                 <ButtonLarge
                     href="login"
                     variant=TEXT
@@ -82,9 +82,9 @@
     <div class="flex flex-col md:flex-row md:items-center space-x-8 container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-24 relative">
         <p>Writing with {"<"}Brand{">"} will be free forever!</p>
         <ButtonLarge
-            href="join"
+            href="try"
             className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
-        >Join now!</ButtonLarge>
+        >Try now!</ButtonLarge>
     </div>
 </section>
 
