@@ -39,7 +39,7 @@
 <!-- USP -->
 <section class="container mx-auto py-8 md:py-20 px-8 flex flex-col md:flex-row items-center">
     <div class="md:w-1/3 flex justify-center mb-8 sm:mb-0">
-        <img src={globe} alt="Globe" style="max-width: 220px" />
+        <img src={globe} alt="Globe" style="max-width: 220px" class="self-start" />
     </div>
 
     <div class="md:w-2/3">
