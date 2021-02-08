@@ -15,8 +15,8 @@
 <!-- Header -->
 <section id="hero" class="bg-gray-600 shadow-md relative" style="--header-home:url({headerHome})">
     <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-32 relative">
-        <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-200 md:text-lg">
-            <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">Perfect your German with fun conversations.</p>
+        <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-lightest md:text-lg">
+            <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">Perfect your German together with fellow polyglots.</p>
             <p class="md:pr-16">We <img src={heart} class="inline w-4 h-4" aria-label="red heart" alt="love" /> all languages and strongly believe they shouldn't be scary.</p>
             <p class="md:pr-16">Everglot guides you towards mastery.</p>
         </div>
@@ -51,7 +51,7 @@
 
 <!-- Features -->
 <section class="bg-gray-lightest py-8 relative">
-    <div class="flex container flex-col md:flex-row mx-auto py-8 px-4 md:px-8 gap-2 md:space-x-8">
+    <div class="flex container flex-col md:flex-row mx-auto py-8 md:py-16 px-4 md:px-8 gap-2 md:space-x-8">
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Get a group that fits your own schedule</h3>
@@ -69,7 +69,7 @@
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Invite your friends</h3>
-            <p>Everglot works even better with your tandem partners. And everyone else is just as friendly as you.</p>
+            <p>Everglot is you and your tandem partners' laid back place to hang out. And the others are just as friendly!</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
             <p>The best way to learn anything is to enjoy the process. After making new friends you'll never want to skip a session again!</p>
         </div>
