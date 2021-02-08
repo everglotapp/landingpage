@@ -2,15 +2,16 @@
 	import PageTitle from "../comp/typography/PageTitle.svelte";
 	import ButtonLarge from "../comp/util/ButtonLarge.svelte";
 
+	let submitted = false;
 	const handleSubmit = (event: Event) => {
-		console.log(event);
+		submitted = true;
 	};
 	let email = "";
 	let password = "";
 </script>
 
 <svelte:head>
-	<title>Join Everglot</title>
+	<title>Join – Everglot</title>
 </svelte:head>
 
 <div class="container px-4 mx-auto my-16 max-w-sm">
@@ -34,6 +35,7 @@
 			variant=TEXT
 			className="w-full justify-center"
 		>I already have an account</ButtonLarge>
+		<div class="py-4 font-bold my-8 px-8 bg-primary-lightest {submitted ? "" : "hidden"}">Sorry, signup will be available soon!</div>
 	</form>
 </div>
 
