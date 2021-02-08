@@ -1,17 +1,17 @@
 version: 2
 jobs:
-  # build:
-    # docker:
-    #     - image: circleci/node:8.4-stretch
-    #     - image: circleci/mongo:3.6-xenial
-    # steps:
-    #     - checkout
-    #     - run:
-    #         name: install dependencies
-    #         command: npm install
-    #     - run:
-    #         name: run tests
-    #         command: npm test
+  build:
+    docker:
+        - image: circleci/node:8.4-stretch
+        # - image: circleci/mongo:3.6-xenial
+    steps:
+        - checkout
+        # - run:
+        #     name: install dependencies
+        #     command: npm install
+        # - run:
+        #     name: run tests
+        #     command: npm test
   deploy:
     machine:
       enabled: true
@@ -25,10 +25,10 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      # - build
-      - deploy
-          # requires:
-          #   - build
+      - build
+      - deploy:
+          requires:
+            - build
           filters:
             branches:
               only: master
