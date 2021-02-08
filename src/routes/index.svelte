@@ -2,7 +2,9 @@
     import ButtonLarge from "../comp/util/ButtonLarge.svelte";
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte";
     import heart from "images/heart.svg";
-    import headerHome from "images/header-home.jpg";
+    import headerHome1920 from "images/header-home-1920.jpg";
+    import headerHome1280 from "images/header-home-1280.jpg";
+    import headerHome1024 from "images/header-home-1024.jpg";
     import studyCall from "images/study-call.jpg";
     import group from "images/group.jpg";
     import friends from "images/friends.jpg";
@@ -16,7 +18,7 @@
 <ScrollDownArrow />
 
 <!-- Header -->
-<section id="hero" class="bg-gray-600 shadow-md relative" style="--header-home:url({headerHome})">
+<section id="hero" class="bg-gray-600 shadow-md relative" style="--header-home-1920:url({headerHome1920});--header-home-1280:url({headerHome1280});--header-home-1024:url({headerHome1024});">
     <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-32 relative">
         <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-lightest md:text-lg">
             <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">Perfect your language skills together with fellow polyglots.</p>
@@ -40,12 +42,12 @@
 </section>
 
 <!-- USP -->
-<section class="container md:max-w-6xl mx-auto py-8 flex flex-col-reverse sm:flex-row justify-center items-center">
-    <div class="md:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0">
-        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md rounded-xl" />
+<section class="container md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 sm:py-16 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0">
+    <div class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16">
+        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md rounded-lg" />
     </div>
 
-    <div class="md:w-2/3 px-8 sm:px-0 py-16 sm:py-0">
+    <div class="md:w-1/2 xl:w-2/3 px-8 md:px-0 py-16 sm:py-0 mb-16 lg:mb-0">
         <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
         <p>Everglots are building the world's most welcoming community around language learning.</p>
         <p>Native speakers teach their languages to each other, helping those who are struggling.</p>
@@ -54,7 +56,7 @@
 
 <!-- Features -->
 <section class="bg-gray-lightest py-8 relative features">
-    <div class="flex container flex-col md:flex-row mx-auto py-8 md:py-16 px-4 md:px-8 gap-2 md:space-x-8">
+    <div class="flex container flex-col md:flex-row mx-auto py-8 md:py-16 px-4 lg:px-8 gap-2 md:space-x-8">
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Get a group that fits your own schedule</h3>
@@ -71,12 +73,12 @@
             <div class="feature-image-container">
                 <img src={books} alt="Library" />
             </div>
-            <p>Making mistakes is encouraged. Correcting others is usually helpful as well, provided that it's constructive!</p>
+            <p>Making mistakes is encouraged. Correcting each other is usually helpful as well, provided that it's constructive!</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Invite your friends</h3>
-            <p>Everglot is you and your tandem partners' laid back place to hang out. And the others are just as friendly!</p>
+            <p>Everglot is you and your tandem partners' laid back place to hang out. And the others are just as friendly.</p>
             <div class="feature-image-container">
                 <img src={friends} alt="Friends" />
             </div>
@@ -98,6 +100,20 @@
 </section>
 
 <style>
+    #hero {
+        max-width: 1920px;
+        margin: 0 auto;
+        max-width: 1024px;
+        max-height: 416px;
+        @screen lg {
+            max-width: 1280px;
+            max-height: 369px;
+        }
+        @screen xl {
+            max-width: 1920px;
+            max-height: 369px;
+        }
+    }
     #hero::before {
         content: "";
         position: absolute;
@@ -105,15 +121,27 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: var(--header-home, none);
+        background-image: var(--header-home-1024, none);
+        background-repeat: no-repeat;
         filter: blur(1px) brightness(60%);
-        background-position: 66% -137%;
-        @screen md {
-            background-position: -1300% 30%;
-        }
+        /* background-position: 66% -137%; */
         @screen sm {
             /*background-position: 60% 22%;*/
             transform: none;
+        }
+        @screen lg {
+           background-image: var(--header-home-1280, none);
+            max-width: 1280px;
+            max-height: 369px;
+        }
+        @screen xl {
+            background-image: var(--header-home-1920, none);
+            max-width: 1920px;
+            max-height: 369px;
+        }
+        @screen 2xl {
+            background-repeat: repeat-x;
+            background-position: 242px;
         }
     }
     #study-call {
@@ -138,7 +166,14 @@
         @apply rounded-lg;
         @apply shadow-md;
         @apply overflow-hidden;
-        max-height: 300px;
+        width: 100%;
+        max-height: 296px;
+        @screen md {
+            max-height: 241px;
+        }
+        @screen 2xl {
+            max-height: 296px;
+        }
     }
     section.features .feature-image-container img {
         @apply self-start;

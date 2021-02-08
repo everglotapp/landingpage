@@ -31,7 +31,7 @@
         opacity: 0;
         position: absolute;
         left: 50%;
-        top: 40%;
+        top: 45%;
         transform-origin: 50% 50%;
         transform: translate3d(-50%, -50%, 0);
         animation: arrow-movement 1.5s ease-in-out infinite;
