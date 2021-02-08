@@ -45,7 +45,7 @@
     <div class="md:w-2/3">
         <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
         <p>Everglots are building the world's most welcoming community around language learning.</p>
-        <p>They make the world a better place by helping others who are struggling.</p>
+        <p>Our study groups make the world a better place by helping those who are struggling.</p>
     </div>
 </section>
 
@@ -62,9 +62,9 @@
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Better than movies and textbooks</h3>
-            <p>You never understand what people are saying? We've got you covered, as live subtitles and helpful tutors are here to help.</p>
+            <p>It's hard to follow what people are saying? We've got you covered, as live subtitles and helpful tutors are here to help.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>Making mistakes is encouraged. Correcting others as well. It just shouldn't be annoying.</p>
+            <p>Making mistakes is encouraged. Correcting others is helpful as well, as long as it's constructive!</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
