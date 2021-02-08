@@ -39,7 +39,7 @@
 		<li class="mr-2">
 			<a
 				aria-current="{segment === undefined ? 'page' : undefined}"
-				class="logo font-light"
+				class="logo font-bold uppercase"
 				href="."
 			>Everglot</a>
 		</li>
