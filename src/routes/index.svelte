@@ -2,7 +2,7 @@
     import ButtonLarge from "../comp/util/ButtonLarge.svelte";
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte";
     import heart from "images/heart.svg";
-    import notebook from "images/notebook.jpg";
+    import headerHome from "images/header-home.jpg";
     import globe from "images/globe-cartoon.png";
 </script>
 
@@ -13,10 +13,10 @@
 <ScrollDownArrow />
 
 <!-- Header -->
-<section id="hero" class="bg-primary-lightest shadow-md relative" style="--notebook:url({notebook})">
-    <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-24 relative">
-        <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-black">
-            <p class="text-xl font-bold mb-6 md:mb-3">Perfect your German with fun conversations.</p>
+<section id="hero" class="bg-primary shadow-md relative" style="--header-home:url({headerHome})">
+    <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-32 relative">
+        <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-200 md:text-lg">
+            <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">Perfect your German with fun conversations.</p>
             <p class="md:pr-16">We <img src={heart} class="inline w-4 h-4" aria-label="red heart" alt="love" /> all languages and strongly believe they shouldn't be scary.</p>
             <p class="md:pr-16">Everglot guides you towards mastery.</p>
         </div>
@@ -29,7 +29,7 @@
                 <ButtonLarge
                     href="login"
                     variant=TEXT
-                    className="w-full justify-center md:w-auto border bg-gray-verylight focus:border-primary sm:bg-transparent sm:border-transparent"
+                    className="w-full justify-center md:w-auto border bg-gray-verylight focus:border-primary sm:bg-transparent sm:border-gray-400 sm:text-gray-200 sm:hover:text-primary sm:focus:text-primary"
                 >Login</ButtonLarge>
             </div>
         </div>
@@ -95,12 +95,12 @@
         top: 0; left: 0;
         width: 100%;
         height: 100%;
-        background-image: var(--notebook, none);
-        filter: blur(.1px);
-        background-position: 132% -98%;
+        background-image: var(--header-home, none);
+        filter: blur(1px) brightness(60%);
+        background-position: 62% -122%;
         transform: rotate(1deg);
         @screen md {
-            background-position: 60% 19%;
+            background-position: -1300% 21%;
         }
         @screen sm {
             /*background-position: 60% 22%;*/
