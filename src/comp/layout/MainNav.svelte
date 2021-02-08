@@ -49,14 +49,14 @@
 				href="try"
 			>Try</a>
 		</li> -->
-		<li class="ml-auto">
+		<!-- <li class="ml-auto">
 			<a
 				aria-current="{segment === 'pricing' ? 'page' : undefined}"
 				href="pricing"
 				class="text-gray-bitlight hover:bg-transparent pointer-events-none cursor-default"
 				on:click|preventDefault=""
 			>Pricing</a>
-		</li>
+		</li> -->
 		<li>
 			<a
 				aria-current="{segment === 'about' ? 'page' : undefined}"
