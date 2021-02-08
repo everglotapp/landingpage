@@ -3,7 +3,7 @@
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte";
     import heart from "images/heart.svg";
     import headerHome from "images/header-home.jpg";
-    import globe from "images/globe-cartoon.png";
+    import studyCall from "images/study-call.jpg";
 </script>
 
 <svelte:head>
@@ -37,12 +37,12 @@
 </section>
 
 <!-- USP -->
-<section class="container mx-auto py-8 md:py-20 px-8 flex flex-col md:flex-row items-center">
-    <div class="md:w-1/3 flex justify-center mb-8 sm:mb-0">
-        <img src={globe} alt="Globe" style="max-width: 220px" class="self-start" />
+<section class="container mx-auto pt-8 md:pt-0 flex flex-col-reverse sm:flex-row items-center">
+    <div class="md:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-8 mb-8 sm:mb-0">
+        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md" />
     </div>
 
-    <div class="md:w-2/3">
+    <div class="md:w-2/3 px-8 sm:px-0 py-16 sm:py-0">
         <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
         <p>Everglots are building the world's most welcoming community around language learning.</p>
         <p>Our study groups make the world a better place by helping those who are struggling.</p>
@@ -98,13 +98,18 @@
         height: 100%;
         background-image: var(--header-home, none);
         filter: blur(1px) brightness(60%);
-        background-position: 62% -122%;
+        background-position: 66% -137%;
         @screen md {
             background-position: -1300% 30%;
         }
         @screen sm {
             /*background-position: 60% 22%;*/
             transform: none;
+        }
+    }
+    #study-call {
+        @screen sm {
+            max-width: 340px;
         }
     }
     h3 {
