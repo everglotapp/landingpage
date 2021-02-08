@@ -44,7 +44,7 @@
 
     <div class="md:w-2/3">
         <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
-        <p>Members of Everglot are building the world's most welcoming community around language learning.</p>
+        <p>Everglots are building the world's most welcoming community around language learning.</p>
         <p>They make the world a better place by helping others who are struggling.</p>
     </div>
 </section>
@@ -54,17 +54,10 @@
     <div class="flex container flex-col md:flex-row mx-auto py-8 px-4 md:px-8 gap-2 md:space-x-8">
 
         <div class="md:w-1/3 mb-16 md:mb-0">
-            <h3>Get a group that matches your own schedule</h3>
-            <p>Get inspired by our writing prompts or translate one of our existing stories.</p>
+            <h3>Get a group that fits your own schedule</h3>
+            <p>Even if you're really busy, you can always find people who have time when you do.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>We know that the best way to learn anything is to enjoy the process. Make new friends and never miss a class again.</p>
-        </div>
-
-        <div class="md:w-1/3 mb-16 md:mb-0">
-            <h3>Invite your friends</h3>
-            <p>Everglot works even better with your tandem partners. And everyone else is just as friendly as you, we make sure of that.</p>
-            <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>If you want to, you are even free to help others learn your native language.</p>
+            <p>Good study groups live on differences. Some like teaching, others like to keep the spirit up or to focus on studying.</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
@@ -72,6 +65,13 @@
             <p>You never understand what people are saying? We've got you covered, as live subtitles and helpful tutors are here to help.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
             <p>Making mistakes is encouraged. Correcting others as well. It just shouldn't be annoying.</p>
+        </div>
+
+        <div class="md:w-1/3 mb-16 md:mb-0">
+            <h3>Invite your friends</h3>
+            <p>Everglot works even better with your tandem partners. And everyone else is just as friendly as you.</p>
+            <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
+            <p>We know that the best way to learn anything is to enjoy the process. Make new friends and never miss a session again.</p>
         </div>
 
     </div>
@@ -92,15 +92,15 @@
     #hero::before {
         content: "";
         position: absolute;
-        top: 0; left: 0;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
         background-image: var(--header-home, none);
         filter: blur(1px) brightness(60%);
         background-position: 62% -122%;
-        transform: rotate(1deg);
         @screen md {
-            background-position: -1300% 21%;
+            background-position: -1300% 30%;
         }
         @screen sm {
             /*background-position: 60% 22%;*/
