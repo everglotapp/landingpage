@@ -18,11 +18,7 @@
         <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-black">
             <p class="text-xl font-bold mb-6 md:mb-3">Perfect your German with fun conversations.</p>
             <p class="md:pr-16">We <img src={heart} class="inline w-4 h-4" aria-label="red heart" alt="love" /> all languages and strongly believe they shouldn't be scary.</p>
-<<<<<<< HEAD
-            <p class="md:pr-16">Everglot makes learning languages fun!.</p>
-=======
             <p class="md:pr-16">Everglot guides you towards mastery.</p>
->>>>>>> 4c81418 (change copy and brand name to fit Everglot)
         </div>
         <div class="md:w-1/2">
             <div class="p-6 z-10">
