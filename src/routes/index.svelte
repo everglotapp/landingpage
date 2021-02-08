@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>{"<"}Brand{">"}</title>
+	<title>Everglot</title>
 </svelte:head>
 
 <ScrollDownArrow />

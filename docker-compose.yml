@@ -1,9 +1,8 @@
 version: "3"
 
 services:
-    lang:
-        build:
-            context: .
+    everglot-lp:
+        image: everglot/everglot-lp:latest
         restart: always
         working_dir: /usr/src/app
         ports:
