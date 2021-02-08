@@ -61,7 +61,7 @@
 			<a
 				aria-current="{segment === 'about' ? 'page' : undefined}"
 				href="about"
-				class="text-gray-bitlight hover:bg-transparent pointer-events-none cursor-default"
+				class="text-gray-bitlight hover:bg-transparent cursor-not-allowed"
 				on:click|preventDefault=""
 			>About</a>
 		</li>
