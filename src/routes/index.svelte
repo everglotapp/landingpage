@@ -4,6 +4,9 @@
     import heart from "images/heart.svg";
     import headerHome from "images/header-home.jpg";
     import studyCall from "images/study-call.jpg";
+    import group from "images/group.jpg";
+    import friends from "images/friends.jpg";
+    import books from "images/books.jpg";
 </script>
 
 <svelte:head>
@@ -37,9 +40,9 @@
 </section>
 
 <!-- USP -->
-<section class="container mx-auto pt-8 md:pt-0 flex flex-col-reverse sm:flex-row items-center">
-    <div class="md:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-8 mb-8 sm:mb-0">
-        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md" />
+<section class="container md:max-w-6xl mx-auto py-8 flex flex-col-reverse sm:flex-row justify-center items-center">
+    <div class="md:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0">
+        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md rounded-xl" />
     </div>
 
     <div class="md:w-2/3 px-8 sm:px-0 py-16 sm:py-0">
@@ -50,27 +53,33 @@
 </section>
 
 <!-- Features -->
-<section class="bg-gray-lightest py-8 relative">
+<section class="bg-gray-lightest py-8 relative features">
     <div class="flex container flex-col md:flex-row mx-auto py-8 md:py-16 px-4 md:px-8 gap-2 md:space-x-8">
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Get a group that fits your own schedule</h3>
             <p>Even if you're really busy, you can always find people who have time when you do.</p>
-            <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
+            <div class="feature-image-container">
+                <img src={group} alt="Study group" />
+            </div>
             <p>Successful study groups live on diversity. Some like teaching, others focus on studying or simply keep the spirit up <span aria-label="wink">😉</span></p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Better than movies and textbooks</h3>
             <p>It's hard to follow what people are saying? We've got you covered, as live subtitles and amazing tutors are here to help.</p>
-            <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
+            <div class="feature-image-container">
+                <img src={books} alt="Library" />
+            </div>
             <p>Making mistakes is encouraged. Correcting others is usually helpful as well, provided that it's constructive!</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Invite your friends</h3>
             <p>Everglot is you and your tandem partners' laid back place to hang out. And the others are just as friendly!</p>
-            <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
+            <div class="feature-image-container">
+                <img src={friends} alt="Friends" />
+            </div>
             <p>The best way to learn anything is to enjoy the process. After making new friends you'll never want to skip a session again!</p>
         </div>
 
@@ -118,5 +127,22 @@
         @apply text-gray-dark;
         @apply font-bold;
         @apply mb-2;
+    }
+    section.features .feature-image-container {
+        @apply my-6;
+        @apply text-center;
+        @apply w-full;
+        @apply bg-gray-verylight;
+        @apply text-gray-bitdark;
+        @apply italic;
+        @apply rounded-lg;
+        @apply shadow-md;
+        @apply overflow-hidden;
+        max-height: 300px;
+    }
+    section.features .feature-image-container img {
+        @apply self-start;
+        @apply max-w-full;
+        @apply shadow-md;
     }
 </style>
