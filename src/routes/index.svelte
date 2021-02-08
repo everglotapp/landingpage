@@ -13,7 +13,7 @@
 <ScrollDownArrow />
 
 <!-- Header -->
-<section id="hero" class="bg-primary shadow-md relative" style="--header-home:url({headerHome})">
+<section id="hero" class="bg-gray-600 shadow-md relative" style="--header-home:url({headerHome})">
     <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-32 relative">
         <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-200 md:text-lg">
             <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">Perfect your German with fun conversations.</p>
@@ -45,7 +45,7 @@
     <div class="md:w-2/3 px-8 sm:px-0 py-16 sm:py-0">
         <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
         <p>Everglots are building the world's most welcoming community around language learning.</p>
-        <p>Our study groups make the world a better place by helping those who are struggling.</p>
+        <p>Native speakers teach their languages to each other, helping those who are struggling.</p>
     </div>
 </section>
 
