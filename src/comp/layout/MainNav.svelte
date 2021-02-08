@@ -57,7 +57,7 @@
 				on:click|preventDefault=""
 			>Pricing</a>
 		</li> -->
-		<li>
+		<li class="ml-auto">
 			<a
 				aria-current="{segment === 'about' ? 'page' : undefined}"
 				href="about"

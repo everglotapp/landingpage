@@ -23,9 +23,9 @@
         <div class="md:w-1/2">
             <div class="p-6 z-10">
                 <ButtonLarge
-                    href="try"
+                    href="join"
                     className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
-                >Try now!</ButtonLarge>
+                >Join now!</ButtonLarge>
                 <ButtonLarge
                     href="login"
                     variant=TEXT
@@ -57,21 +57,21 @@
             <h3>Get a group that fits your own schedule</h3>
             <p>Even if you're really busy, you can always find people who have time when you do.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>Good study groups live on differences. Some like teaching, others like to keep the spirit up or to focus on studying.</p>
+            <p>Successful study groups live on diversity. Some like teaching, others focus on studying or simply keep the spirit up <span aria-label="wink">😉</span></p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Better than movies and textbooks</h3>
-            <p>It's hard to follow what people are saying? We've got you covered, as live subtitles and helpful tutors are here to help.</p>
+            <p>It's hard to follow what people are saying? We've got you covered, as live subtitles and amazing tutors are here to help.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>Making mistakes is encouraged. Correcting others is helpful as well, as long as it's constructive!</p>
+            <p>Making mistakes is encouraged. Correcting others is usually helpful as well, provided that it's constructive!</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Invite your friends</h3>
             <p>Everglot works even better with your tandem partners. And everyone else is just as friendly as you.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>We know that the best way to learn anything is to enjoy the process. Make new friends and never miss a session again.</p>
+            <p>The best way to learn anything is to enjoy the process. After making new friends you'll never want to skip a session again!</p>
         </div>
 
     </div>
@@ -80,11 +80,11 @@
 
 <section id="footer-cta" class="bg-primary-lightest shadow-sm relative" style="--footer-cta-bg:url('')">
     <div class="flex flex-col md:flex-row md:items-center space-y-8 md:space-y-0 md:space-x-8 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-24 relative">
-        <p>Sign up, it's free!</p>
+        <p class="font-bold">Sign up, it's free!</p>
         <ButtonLarge
-            href="try"
+            href="join"
             className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
-        >Try now!</ButtonLarge>
+        >Join now!</ButtonLarge>
     </div>
 </section>
 
