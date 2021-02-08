@@ -10,11 +10,11 @@
 </script>
 
 <svelte:head>
-	<title>Login to {"<"}Brand{">"}</title>
+	<title>Login to Everglot</title>
 </svelte:head>
 
-<div class="container px-4 mx-auto my-16 max-w-sm">
-	<PageTitle>Login to {"<"}Brand{">"}</PageTitle>
+<div class="container px-4 mx-auto mt-16 mb-32 max-w-sm">
+	<PageTitle>Login to Everglot</PageTitle>
 
 	<form on:submit|preventDefault="{handleSubmit}" method="post" class="bg-white my-8">
 		<div class="flex flex-col w-full mb-2">

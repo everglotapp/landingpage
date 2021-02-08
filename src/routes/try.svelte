@@ -56,12 +56,12 @@
 </script>
 
 <div class="container mx-auto px-4 flex justify-center">
-    <div class="blocks py-8 md:py-24 w-full">
+    <div class="blocks py-8 md:py-16 w-full min-h-screen">
         <PageTitle className="relative">
             <span
                 contenteditable
                 bind:textContent={title}
-                class="title-inner pl-6 bg-gray-verylight w-full"
+                class="title-inner px-2 py-1 mr-6 bg-gray-verylight w-full"
             />
         </PageTitle>
         {#each blockSequence as blockId}
@@ -69,7 +69,7 @@
                 contenteditable
                 bind:innerHTML={blocks[blockId].innerHTML}
                 on:keyup={onKeyup(blockId)}
-                class="w-full rounded-2xl h-auto bg-gray-lightest text-gray-dark px-6 py-4 mb-2"
+                class="block w-full rounded-2xl h-auto bg-gray-lightest text-gray-dark px-6 py-4 mb-2"
             />
         {/each}
         <div class="mt-8">
@@ -82,11 +82,14 @@
     .blocks {
         max-width: 480px;
     }
+    .block:focus {
+        @apply bg-white;
+    }
     .title-inner::before {
-        content: "✏️";
+        content: "🖉";
         position: absolute;
         top: 0.3rem;
-        left: 4px;
+        right: 4px;
         @apply font-normal;
         @apply text-sm;
         @apply text-gray-light;

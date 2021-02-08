@@ -10,11 +10,11 @@
 </script>
 
 <svelte:head>
-	<title>Join {"<"}Brand{">"}</title>
+	<title>Join Everglot</title>
 </svelte:head>
 
 <div class="container px-4 mx-auto my-16 max-w-sm">
-	<PageTitle>Join {"<"}Brand{">"}</PageTitle>
+	<PageTitle>Join Everglot</PageTitle>
 
 	<form on:submit|preventDefault="{handleSubmit}" method="post" class="bg-white my-8">
 		<div class="flex flex-col w-full mb-2">

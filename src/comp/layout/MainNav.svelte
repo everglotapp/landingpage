@@ -3,12 +3,12 @@
 </script>
 
 <style>
-	[aria-current] {
+	li a[aria-current] {
 		position: relative;
 		display: inline-block;
 	}
 
-	[aria-current]::after {
+	li a[aria-current]::after {
 		position: absolute;
 		content: '';
 		height: 2px;
@@ -19,7 +19,11 @@
 		@apply bg-accent;
 	}
 
-	a {
+	li a[aria-current].logo::after {
+		background-color: transparent;
+	}
+
+	li a {
 		display: flex;
 		padding: 1rem 1rem;
 		text-decoration: none;
@@ -32,19 +36,19 @@
 
 <nav class="flex container mx-auto px-2">
 	<ul class="flex flex-1">
-		<li>
+		<li class="mr-2">
 			<a
 				aria-current="{segment === undefined ? 'page' : undefined}"
-				class="italic"
+				class="logo font-light"
 				href="."
-			>{"<"}Brand{">"} logo</a>
+			>Everglot</a>
 		</li>
-		<li>
+		<!-- <li class="ml-auto">
 			<a
 				aria-current="{segment === 'try' ? 'page' : undefined}"
 				href="try"
 			>Try</a>
-		</li>
+		</li> -->
 		<li class="ml-auto">
 			<a
 				aria-current="{segment === 'pricing' ? 'page' : undefined}"
@@ -52,6 +56,14 @@
 				class="text-gray-bitlight hover:bg-transparent pointer-events-none cursor-default"
 				on:click|preventDefault=""
 			>Pricing</a>
+		</li>
+		<li>
+			<a
+				aria-current="{segment === 'about' ? 'page' : undefined}"
+				href="about"
+				class="text-gray-bitlight hover:bg-transparent pointer-events-none cursor-default"
+				on:click|preventDefault=""
+			>About</a>
 		</li>
 		<li>
 			<a

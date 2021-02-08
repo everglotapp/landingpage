@@ -16,9 +16,13 @@
 <section id="hero" class="bg-primary-lightest shadow-md relative" style="--notebook:url({notebook})">
     <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-24 relative">
         <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-black">
-            <p class="text-xl font-bold mb-6 md:mb-3">Learn languages together with fun stories.</p>
+            <p class="text-xl font-bold mb-6 md:mb-3">Perfect your German with fun conversations.</p>
             <p class="md:pr-16">We <img src={heart} class="inline w-4 h-4" aria-label="red heart" alt="love" /> all languages and strongly believe they shouldn't be scary.</p>
+<<<<<<< HEAD
             <p class="md:pr-16">Everglot makes learning languages fun!.</p>
+=======
+            <p class="md:pr-16">Everglot guides you towards mastery.</p>
+>>>>>>> 4c81418 (change copy and brand name to fit Everglot)
         </div>
         <div class="md:w-1/2">
             <div class="p-6 z-10">
@@ -44,7 +48,7 @@
 
     <div class="md:w-2/3">
         <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
-        <p>Members of {"<"}Brand{">"} are building the world's largest collection of exciting, interactive lessons.</p>
+        <p>Members of Everglot are building the world's most welcoming community around language learning.</p>
         <p>They make the world a better place by helping others who are struggling.</p>
     </div>
 </section>
@@ -54,24 +58,24 @@
     <div class="flex container flex-col md:flex-row mx-auto py-8 px-4 md:px-8 gap-2 md:space-x-8">
 
         <div class="md:w-1/3 mb-16 md:mb-0">
-            <h3>Say goodbye to writer's block</h3>
+            <h3>Get a group that matches your own schedule</h3>
             <p>Get inspired by our writing prompts or translate one of our existing stories.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>The best way to learn anything is to enjoy it. Write about your favorite places, foods or hobbies.</p>
+            <p>We know that the best way to learn anything is to enjoy the process. Make new friends and never miss a class again.</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Invite your friends</h3>
-            <p>{"<"}Brand{">"} works even better with your tandem partners. You can also do lessons together.</p>
+            <p>Everglot works even better with your tandem partners. And everyone else is just as friendly as you, we make sure of that.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>Make your stories as interactive as games! Choose for yourself who you want to share them with.</p>
+            <p>If you want to, you are even free to help others learn your native language.</p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
-            <h3>Better than dictionaries</h3>
-            <p>Keep running out of words? No need to worry, as we've got instant suggestions lined up for you.</p>
+            <h3>Better than movies and textbooks</h3>
+            <p>You never understand what people are saying? We've got you covered, as live subtitles and helpful tutors are here to help.</p>
             <div class="py-24 my-6 text-center w-full bg-gray-verylight text-gray-bitdark italic rounded-2xl shadow-sm">Demo</div>
-            <p>Go as far as you want whenever you feel ready.</p>
+            <p>Making mistakes is encouraged. Correcting others as well. It just shouldn't be annoying.</p>
         </div>
 
     </div>
@@ -79,8 +83,8 @@
 
 
 <section id="footer-cta" class="bg-primary-lightest shadow-sm relative" style="--footer-cta-bg:url('')">
-    <div class="flex flex-col md:flex-row md:items-center space-x-8 container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-24 relative">
-        <p>Writing with {"<"}Brand{">"} will be free forever!</p>
+    <div class="flex flex-col md:flex-row md:items-center space-y-8 md:space-y-0 md:space-x-8 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-24 relative">
+        <p>Sign up, it's free!</p>
         <ButtonLarge
             href="try"
             className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
