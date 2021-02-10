@@ -123,10 +123,11 @@
         height: 100%;
         background-image: var(--header-home-1024, none);
         background-repeat: no-repeat;
-        filter: blur(1px) brightness(60%);
-        /* background-position: 66% -137%; */
+        filter: blur(1px) brightness(40%);
+        background-position: 34% 0%;
         @screen sm {
-            /*background-position: 60% 22%;*/
+            background-position: 0% 0%;
+            filter: blur(1px) brightness(60%);
             transform: none;
         }
         @screen lg {
