@@ -53,37 +53,7 @@
         Verantwortlicher Anbieter dieses Internetauftritts im
         datenschutzrechtlichen Sinne ist:
     </p>
-    <p>
-        <span style="color: #ff0000;"
-            >Musterfirma/Musterunternehmer<br />Musterstraße 1<br />12345
-            Musterstadt<br />Deutschland</span
-        >
-    </p>
-    <p>
-        <span style="color: #ff0000;"
-            >Telefon: Telefonnummer<br />Telefax: Faxnummer<br />E-Mail:
-            muster@mustermail.xy</span
-        >
-    </p>
-    <p>Datenschutzbeauftragte/r beim Anbieter ist:</p>
-    <p><span style="color: #ff0000;">Maxie Musterfrau&nbsp;</span></p>
-    <p>
-        <span style="color: #ff0000;"
-            >[nachfolgende Angaben sind zu ergänzen, sofern ein Externer
-            Datenschutzbeauftragter bestellt ist]</span
-        >
-    </p>
-    <p>
-        <span style="color: #ff0000;"
-            >Musterstraße 1<br />12345 Musterstadt<br />Deutschland</span
-        >
-    </p>
-    <p>
-        <span style="color: #ff0000;"
-            >Telefon: Telefonnummer<br />Telefax: Faxnummer<br />E-Mail:
-            datenschutz@mustermail.xy</span
-        >
-    </p>
+    <p>Everglot</p>
     <h3>II. Rechte der Nutzer und Betroffenen</h3>
     <p>
         Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung
@@ -372,12 +342,12 @@
         Ihrem Internet-Browsers zu verhindern. Nähere Informationen hierzu
         finden Sie vorstehend unter „Cookies“.
     </p>
-    <p>
+    <p class="hidden">
         Darüber hinaus haben Sie die Möglichkeit, die Analyse Ihres
         Nutzungsverhaltens im Wege des sog. Opt-outs zu beenden. Mit dem
         Bestätigen des Links
     </p>
-    <p>
+    <p class="hidden">
         <span style="color: #ff0000;"
             >[HIER BITTE IFRAME VON MATOMO MIT OPT-OUT-COOKIE EINFÜGEN]</span
         >
@@ -448,5 +418,9 @@
 <style>
     a {
         @apply py-4;
+    }
+    ul li {
+        @apply pl-16;
+        @apply mb-4;
     }
 </style>

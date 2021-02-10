@@ -50,37 +50,7 @@
         The party responsible for this website (the "controller") for purposes
         of data protection law is:
     </p>
-    <p>
-        <span style="color: #ff0000;">Sample company/entrepreneur</span><br
-        /><span style="color: #ff0000;">Any street 1</span><br /><span
-            style="color: #ff0000;">12345 Anytown</span
-        ><br /><span style="color: #ff0000;">Germany</span>
-    </p>
-    <p>
-        <span style="color: #ff0000;">Telephone: Telephone number</span><br
-        /><span style="color: #ff0000;">Fax: Fax number</span><br /><span
-            style="color: #ff0000;">Email: muster@mustermail.xy</span
-        >
-    </p>
-    <p>The controller's data protection officer is:</p>
-    <p><span style="color: #ff0000;">Maxie Musterfrau&nbsp;</span></p>
-    <p>
-        <span style="color: #ff0000;"
-            >[The following information must be added if an external data
-            protection officer has been appointed].</span
-        >
-    </p>
-    <p>
-        <span style="color: #ff0000;">Any street 1</span><br /><span
-            style="color: #ff0000;">12345 Anytown</span
-        ><br /><span style="color: #ff0000;">Germany</span>
-    </p>
-    <p>
-        <span style="color: #ff0000;">Telephone: Telephone number</span><br
-        /><span style="color: #ff0000;">Fax: Fax number</span><br /><span
-            style="color: #ff0000;">Email: datenschutz@mustermail.xy</span
-        >
-    </p>
+    <p>Everglot</p>
     <h3>II. The rights of users and data subjects</h3>
     <p>
         With regard to the data processing to be described in more detail below,
@@ -337,16 +307,16 @@
         settings in your browser. Further details can be found in the section
         about cookies above.
     </p>
-    <p>
+    <p class="hidden">
         In addition, you have the option of terminating the analysis of your
         usage behavior by opting out. By confirming the link
     </p>
-    <p>
+    <p class="hidden">
         <span style="color: #ff0000;"
             >[HERE ADD INSERT IFRAME FROM MATOMO WITH OPT-OUT-COOKIE]</span
         >
     </p>
-    <p>
+    <p class="hidden">
         a cookie is stored on your device via your browser to prevent any
         further analysis. Please note, however, that you must click the above
         link again if you delete the cookies stored on your end device.
@@ -403,5 +373,9 @@
 <style>
     a {
         @apply py-4;
+    }
+    ul li {
+        @apply pl-16;
+        @apply mb-4;
     }
 </style>
