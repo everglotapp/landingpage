@@ -1,3 +1,7 @@
+<script lang="ts">
+    export let segment: string | undefined
+</script>
+
 <footer
     class="container flex flex-col-reverse sm:flex-row sm:justify-between mx-auto py-4 md:py-8 px-8 text-gray-bitdark"
 >
@@ -9,7 +13,12 @@
     <div
         class="flex self-center sm:space-x-8 sm:justify-end flex-col sm:flex-row"
     >
-        <a href="/privacy">Privacy</a>
+        <a
+            href="/privacy"
+            aria-current={segment === "privacy" || segment === "datenschutz"
+                ? "page"
+                : undefined}>Privacy</a
+        >
         <span class="cursor-not-allowed mb-3">Imprint</span>
     </div>
 </footer>
@@ -18,5 +27,8 @@
     a {
         @apply text-gray-bitdark;
         @apply mb-3;
+    }
+    a[aria-current] {
+        @apply text-primary;
     }
 </style>
