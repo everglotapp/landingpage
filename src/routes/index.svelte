@@ -44,13 +44,13 @@
 <!-- USP -->
 <section class="container md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 sm:py-16 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0">
     <div class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16">
-        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md rounded-lg" />
+        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md sm:rounded-lg" />
     </div>
 
     <div class="md:w-1/2 xl:w-2/3 px-8 md:px-0 py-16 sm:py-0 mb-16 lg:mb-0">
         <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
-        <p>Everglots are building the world's most welcoming community around language learning.</p>
-        <p>Native speakers teach their languages to each other, helping those who are struggling.</p>
+        <p class="mb-4 sm:mb-0">Everglots are building the world's most <strong class="text-gray-dark">welcoming</strong> community around language learning.</p>
+        <p>Native speakers teach their languages to each other, helping those who are struggling finally make <strong class="text-gray-dark">lasting progress</strong>.</p>
     </div>
 </section>
 
