@@ -1,28 +1,43 @@
 <script lang="ts">
-    import ButtonLarge from "../comp/util/ButtonLarge.svelte";
-    import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte";
-    import heart from "images/heart.svg";
-    import headerHome1920 from "images/header-home-1920.jpg";
-    import headerHome1280 from "images/header-home-1280.jpg";
-    import headerHome1024 from "images/header-home-1024.jpg";
-    import studyCall from "images/study-call.jpg";
-    import group from "images/group.jpg";
-    import friends from "images/friends.jpg";
-    import books from "images/books.jpg";
+    import ButtonLarge from "../comp/util/ButtonLarge.svelte"
+    import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte"
+    import heart from "images/heart.svg"
+    import headerHome1920 from "images/header-home-1920.jpg"
+    import headerHome1280 from "images/header-home-1280.jpg"
+    import headerHome1024 from "images/header-home-1024.jpg"
+    import studyCall from "images/study-call.jpg"
+    import group from "images/group.jpg"
+    import friends from "images/friends.jpg"
+    import books from "images/books.jpg"
 </script>
 
 <svelte:head>
-	<title>Everglot – Language Community</title>
+    <title>Everglot – Language Community</title>
 </svelte:head>
 
 <ScrollDownArrow />
 
 <!-- Header -->
-<section id="hero" class="bg-gray-600 shadow-md relative" style="--header-home-1920:url({headerHome1920});--header-home-1280:url({headerHome1280});--header-home-1024:url({headerHome1024});">
-    <div class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-32 relative">
+<section
+    id="hero"
+    class="bg-gray-600 shadow-md relative"
+    style="--header-home-1920:url({headerHome1920});--header-home-1280:url({headerHome1280});--header-home-1024:url({headerHome1024});"
+>
+    <div
+        class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-32 relative"
+    >
         <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-lightest md:text-lg">
-            <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">Perfect your language skills together with fellow polyglots.</p>
-            <p class="md:pr-16">We <img src={heart} class="inline w-4 h-4" aria-label="red heart" alt="love" /> all languages and strongly believe they shouldn't be scary.</p>
+            <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">
+                Perfect your language skills together with fellow polyglots.
+            </p>
+            <p class="md:pr-16">
+                We <img
+                    src={heart}
+                    class="inline w-4 h-4"
+                    aria-label="red heart"
+                    alt="love"
+                /> all languages and strongly believe they shouldn't be scary.
+            </p>
             <p class="md:pr-16">Everglot guides you towards mastery.</p>
         </div>
         <div class="md:w-1/2">
@@ -30,76 +45,125 @@
                 <ButtonLarge
                     href="join"
                     className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
-                >Join now!</ButtonLarge>
+                    >Join now!</ButtonLarge
+                >
                 <ButtonLarge
-                    variant=OUTLINED
-                    color=SECONDARY
+                    variant="OUTLINED"
+                    color="SECONDARY"
                     href="login"
                     className="w-full justify-center md:w-auto"
-                >Login</ButtonLarge>
+                    >Login</ButtonLarge
+                >
             </div>
         </div>
     </div>
 </section>
 
 <!-- USP -->
-<section class="container md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 sm:py-16 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0">
-    <div class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16">
-        <img id="study-call" src={studyCall} alt="Study call" class="self-start max-w-full shadow-md sm:rounded-lg" />
+<section
+    class="container md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 sm:py-16 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0"
+>
+    <div
+        class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16"
+    >
+        <img
+            id="study-call"
+            src={studyCall}
+            alt="Study call"
+            class="self-start max-w-full shadow-md sm:rounded-lg"
+        />
     </div>
 
     <div class="md:w-1/2 xl:w-2/3 px-8 md:px-0 py-16 sm:py-0 mb-16 lg:mb-0">
-        <h2 class="text-lg text-gray-dark font-bold mb-2">Speaking a foreign tongue can be much easier.</h2>
-        <p class="mb-4 sm:mb-0">Everglots are building the world's most <strong class="text-gray-dark">welcoming</strong> community around language learning.</p>
-        <p>Native speakers teach their languages to each other, helping those who are struggling finally make <strong class="text-gray-dark">lasting progress</strong>.</p>
+        <h2 class="text-lg text-gray-dark font-bold mb-2">
+            Speaking a foreign tongue can be much easier.
+        </h2>
+        <p class="mb-4 sm:mb-0">
+            Everglots are building the world's most <strong
+                class="text-gray-dark">welcoming</strong
+            > community around language learning.
+        </p>
+        <p>
+            Native speakers teach their languages to each other, helping those
+            who are struggling finally make <strong class="text-gray-dark"
+                >lasting progress</strong
+            >.
+        </p>
     </div>
 </section>
 
 <!-- Features -->
 <section class="bg-gray-lightest py-8 relative features">
-    <div class="flex container flex-col md:flex-row mx-auto py-8 md:py-16 px-4 lg:px-8 gap-2 md:space-x-8">
-
+    <div
+        class="flex container flex-col md:flex-row mx-auto py-8 md:py-16 px-4 lg:px-8 gap-2 md:space-x-8"
+    >
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Get a group that fits your own schedule</h3>
-            <p>Even if you're really busy, you can always find people who have time when you do.</p>
+            <p>
+                Even if you're really busy, you can always find people who have
+                time when you do.
+            </p>
             <div class="feature-image-container">
                 <img src={group} alt="Study group" />
             </div>
-            <p>Successful study groups live on diversity. Some like teaching, others focus on studying or simply keep the spirit up <span aria-label="wink">😉</span></p>
+            <p>
+                Successful study groups live on diversity. Some like teaching,
+                others focus on studying or simply keep the spirit up <span
+                    aria-label="wink">😉</span
+                >
+            </p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Better than movies and textbooks</h3>
-            <p>It's hard to follow what people are saying? We've got you covered, as live subtitles and amazing tutors are here to help.</p>
+            <p>
+                It's hard to follow what people are saying? We've got you
+                covered, as live subtitles and amazing tutors are here to help.
+            </p>
             <div class="feature-image-container">
                 <img src={books} alt="Library" />
             </div>
-            <p>Making mistakes is encouraged. Correcting each other is usually helpful as well, provided that it's constructive!</p>
+            <p>
+                Making mistakes is encouraged. Correcting each other is usually
+                helpful as well, provided that it's constructive!
+            </p>
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Invite your friends</h3>
-            <p>Everglot is you and your tandem partners' laid back place to hang out. And the others are just as friendly.</p>
+            <p>
+                Everglot is you and your tandem partners' laid back place to
+                hang out. And the others are just as friendly.
+            </p>
             <div class="feature-image-container">
                 <img src={friends} alt="Friends" />
             </div>
-            <p>The best way to learn anything is to enjoy the process. After making new friends you'll never want to skip a session again!</p>
+            <p>
+                The best way to learn anything is to enjoy the process. After
+                making new friends you'll never want to skip a session again!
+            </p>
         </div>
-
     </div>
 </section>
 
-
-<section id="footer-cta" class="bg-primary-lightest shadow-sm relative" style="--footer-cta-bg:url('')">
-    <div class="flex flex-col md:flex-row md:items-center space-y-8 md:space-y-0 md:space-x-8 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-24 relative">
+<section
+    id="footer-cta"
+    class="bg-primary-lightest shadow-sm relative"
+    style="--footer-cta-bg:url('')"
+>
+    <div
+        class="flex flex-col md:flex-row md:items-center space-y-8 md:space-y-0 md:space-x-8 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-24 relative"
+    >
         <p class="font-bold">Sign up right away!</p>
         <ButtonLarge
             href="join"
-            className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
-        >Join now!</ButtonLarge>
+            className="w-full justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
+            >Join now!</ButtonLarge
+        >
     </div>
 </section>
 
+<!-- Features -->
 <style>
     #hero {
         max-width: 1920px;
@@ -132,7 +196,7 @@
             transform: none;
         }
         @screen lg {
-           background-image: var(--header-home-1280, none);
+            background-image: var(--header-home-1280, none);
             max-width: 1280px;
             max-height: 369px;
         }
