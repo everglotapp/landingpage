@@ -6,7 +6,7 @@
     <title>Everglot – Datenschutzerklärung</title>
 </svelte:head>
 
-<div class="container px-4 mx-auto mt-16 mb-32 max-w-3xl">
+<div class="container px-4 mx-auto mt-16 mb-32 max-w-4xl">
     <PageTitle>Datenschutzerklärung</PageTitle>
     <p>
         <a href="./privacy"
@@ -53,7 +53,11 @@
         Verantwortlicher Anbieter dieses Internetauftritts im
         datenschutzrechtlichen Sinne ist:
     </p>
-    <p>Everglot</p>
+    <p>
+        Everglot (ohne Handelsregistereintrag)<br />
+        Berlin, Deutschland<br />
+        E-Mail: everglotapp AT gmail.com
+    </p>
     <h3>II. Rechte der Nutzer und Betroffenen</h3>
     <p>
         Mit Blick auf die nachfolgend noch näher beschriebene Datenverarbeitung
@@ -310,54 +314,57 @@
         Rechtsgrundlage ist in diesem Fall Art. 6 Abs. 1 lit. f) DSGVO. Unser
         berechtigtes Interesse liegt in der ggf. notwendigen Rechtsverteidigung.
     </p>
-    <h4>Matomo (vormals: PIWIK)</h4>
-    <p>
-        In unserem Internetauftritt setzen wir Matomo (ehemals: „PIWIK“) ein.
-        Hierbei handelt es sich um eine Open-Source-Software, mit der wir die
-        Benutzung unseres Internetauftritts analysieren können. Hierbei werden
-        Ihre IP-Adresse, die Website(s) unseres Internetauftritts, die Sie
-        besuchen, die Website, von der aus Sie auf unseren Internetauftritt
-        gewechselt haben (Referrer URL), Ihre Verweildauer auf unserem
-        Internetauftritt sowie die Häufigkeit des Aufrufs einer unserer Websites
-        verarbeitet.
-    </p>
-    <p>
-        Zur Erfassung dieser Daten speichert Matomo über Ihren Internet-Browser
-        ein Cookie auf Ihrem Endgerät. Dieses Cookie ist eine Woche lang gültig.
-    </p>
-    <p>
-        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes
-        Interesse liegt in der Analyse und Optimierung unseres
-        Internetauftritts.
-    </p>
-    <p>
-        Allerdings nutzen wir Matomo mit der Anonymisierungsfunktion
-        „Automatically Anonymize Visitor IPs“. Diese Anonymisierungsfunktion
-        kürzt Ihre IP-Adresse um zwei Bytes, sodass eine Zuordnung zu Ihnen bzw.
-        zu dem von Ihnen genutzten Internetanschluss unmöglich ist.
-    </p>
-    <p>
-        Falls Sie mit dieser Verarbeitung nicht einverstanden sind, haben Sie
-        die Möglichkeit, die Speicherung des Cookies durch eine Einstellung in
-        Ihrem Internet-Browsers zu verhindern. Nähere Informationen hierzu
-        finden Sie vorstehend unter „Cookies“.
-    </p>
-    <p class="hidden">
-        Darüber hinaus haben Sie die Möglichkeit, die Analyse Ihres
-        Nutzungsverhaltens im Wege des sog. Opt-outs zu beenden. Mit dem
-        Bestätigen des Links
-    </p>
-    <p class="hidden">
-        <span style="color: #ff0000;"
-            >[HIER BITTE IFRAME VON MATOMO MIT OPT-OUT-COOKIE EINFÜGEN]</span
-        >
-    </p>
-    <p>
-        wird über Ihren Internet-Browser ein Cookie auf Ihrem Endgerät
-        gespeichert, das die weitere Analyse verhindert. Bitte beachten Sie
-        aber, dass Sie den obigen Link erneut betätigen müssen, sofern Sie die
-        auf Ihrem Endgerät gespeicherten Cookies löschen.
-    </p>
+    <div class="hidden">
+        <h4>Matomo (vormals: PIWIK)</h4>
+        <p>
+            In unserem Internetauftritt setzen wir Matomo (ehemals: „PIWIK“)
+            ein. Hierbei handelt es sich um eine Open-Source-Software, mit der
+            wir die Benutzung unseres Internetauftritts analysieren können.
+            Hierbei werden Ihre IP-Adresse, die Website(s) unseres
+            Internetauftritts, die Sie besuchen, die Website, von der aus Sie
+            auf unseren Internetauftritt gewechselt haben (Referrer URL), Ihre
+            Verweildauer auf unserem Internetauftritt sowie die Häufigkeit des
+            Aufrufs einer unserer Websites verarbeitet.
+        </p>
+        <p>
+            Zur Erfassung dieser Daten speichert Matomo über Ihren
+            Internet-Browser ein Cookie auf Ihrem Endgerät. Dieses Cookie ist
+            eine Woche lang gültig.
+        </p>
+        <p>
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes
+            Interesse liegt in der Analyse und Optimierung unseres
+            Internetauftritts.
+        </p>
+        <p>
+            Allerdings nutzen wir Matomo mit der Anonymisierungsfunktion
+            „Automatically Anonymize Visitor IPs“. Diese Anonymisierungsfunktion
+            kürzt Ihre IP-Adresse um zwei Bytes, sodass eine Zuordnung zu Ihnen
+            bzw. zu dem von Ihnen genutzten Internetanschluss unmöglich ist.
+        </p>
+        <p>
+            Falls Sie mit dieser Verarbeitung nicht einverstanden sind, haben
+            Sie die Möglichkeit, die Speicherung des Cookies durch eine
+            Einstellung in Ihrem Internet-Browsers zu verhindern. Nähere
+            Informationen hierzu finden Sie vorstehend unter „Cookies“.
+        </p>
+        <p>
+            Darüber hinaus haben Sie die Möglichkeit, die Analyse Ihres
+            Nutzungsverhaltens im Wege des sog. Opt-outs zu beenden. Mit dem
+            Bestätigen des Links
+        </p>
+        <p>
+            <span style="color: #ff0000;"
+                >[HIER BITTE IFRAME VON MATOMO MIT OPT-OUT-COOKIE EINFÜGEN]</span
+            >
+        </p>
+        <p>
+            wird über Ihren Internet-Browser ein Cookie auf Ihrem Endgerät
+            gespeichert, das die weitere Analyse verhindert. Bitte beachten Sie
+            aber, dass Sie den obigen Link erneut betätigen müssen, sofern Sie
+            die auf Ihrem Endgerät gespeicherten Cookies löschen.
+        </p>
+    </div>
     <h4>Google Fonts</h4>
     <p>
         In unserem Internetauftritt setzen wir Google Fonts zur Darstellung

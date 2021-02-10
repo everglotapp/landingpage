@@ -6,7 +6,7 @@
     <title>Everglot – Privacy Policy</title>
 </svelte:head>
 
-<div class="container px-4 mx-auto mt-16 mb-32 max-w-3xl">
+<div class="container px-4 mx-auto mt-16 mb-32 max-w-4xl">
     <PageTitle>Privacy Policy</PageTitle>
     <p>
         <a href="./datenschutz" class="py-4"
@@ -50,7 +50,11 @@
         The party responsible for this website (the "controller") for purposes
         of data protection law is:
     </p>
-    <p>Everglot</p>
+    <p>
+        Everglot (ohne Handelsregistereintrag)<br />
+        Berlin, Germany<br />
+        E-Mail: everglotapp AT gmail.com
+    </p>
     <h3>II. The rights of users and data subjects</h3>
     <p>
         With regard to the data processing to be described in more detail below,
@@ -279,48 +283,51 @@
         In this case, the legal basis is Art. 6 Para. 1 lit. f) GDPR. Our
         legitimate interest lies in any legal defense we may have to mount.
     </p>
-    <h4>Matomo (formerly: PIWIK)</h4>
-    <p>
-        Our website uses Matomo (formerly: PIWIK). This is open-source software
-        with which we can analyze the use of our site. Data such as your IP
-        address, the pages you visit, the website from which you came (referrer
-        URL), the duration of your visit, and the frequency of your visits is
-        processed.
-    </p>
-    <p>
-        Matomo stores a cookie on your device via your browser in order to
-        collect this data. This cookie is valid for one week.
-    </p>
-    <p>
-        The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest
-        lies in the analysis and optimization of our website.
-    </p>
-    <p>
-        We use Matomo with the "Automatically Anonymize Visitor IPs" function.
-        This anonymization function truncates your IP address by two bytes so
-        that it is impossible to assign it to you or to the internet connection
-        you are using.
-    </p>
-    <p>
-        If you do not agree to this processing, you have the option of
-        preventing the installation of cookies by making the appropriate
-        settings in your browser. Further details can be found in the section
-        about cookies above.
-    </p>
-    <p class="hidden">
-        In addition, you have the option of terminating the analysis of your
-        usage behavior by opting out. By confirming the link
-    </p>
-    <p class="hidden">
-        <span style="color: #ff0000;"
-            >[HERE ADD INSERT IFRAME FROM MATOMO WITH OPT-OUT-COOKIE]</span
-        >
-    </p>
-    <p class="hidden">
-        a cookie is stored on your device via your browser to prevent any
-        further analysis. Please note, however, that you must click the above
-        link again if you delete the cookies stored on your end device.
-    </p>
+    <div class="hidden">
+        <h4>Matomo (formerly: PIWIK)</h4>
+        <p>
+            Our website uses Matomo (formerly: PIWIK). This is open-source
+            software with which we can analyze the use of our site. Data such as
+            your IP address, the pages you visit, the website from which you
+            came (referrer URL), the duration of your visit, and the frequency
+            of your visits is processed.
+        </p>
+        <p>
+            Matomo stores a cookie on your device via your browser in order to
+            collect this data. This cookie is valid for one week.
+        </p>
+        <p>
+            The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate
+            interest lies in the analysis and optimization of our website.
+        </p>
+        <p>
+            We use Matomo with the "Automatically Anonymize Visitor IPs"
+            function. This anonymization function truncates your IP address by
+            two bytes so that it is impossible to assign it to you or to the
+            internet connection you are using.
+        </p>
+        <p>
+            If you do not agree to this processing, you have the option of
+            preventing the installation of cookies by making the appropriate
+            settings in your browser. Further details can be found in the
+            section about cookies above.
+        </p>
+        <p>
+            In addition, you have the option of terminating the analysis of your
+            usage behavior by opting out. By confirming the link
+        </p>
+        <p>
+            <span style="color: #ff0000;"
+                >[HERE ADD INSERT IFRAME FROM MATOMO WITH OPT-OUT-COOKIE]</span
+            >
+        </p>
+        <p>
+            a cookie is stored on your device via your browser to prevent any
+            further analysis. Please note, however, that you must click the
+            above link again if you delete the cookies stored on your end
+            device.
+        </p>
+    </div>
     <h4>Google Fonts</h4>
     <p>
         Our website uses Google Fonts to display external fonts. This is a
