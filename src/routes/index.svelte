@@ -29,12 +29,13 @@
             <div class="p-6 z-10">
                 <ButtonLarge
                     href="join"
-                    className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1"
+                    className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
                 >Join now!</ButtonLarge>
                 <ButtonLarge
+                    variant=OUTLINED
+                    color=SECONDARY
                     href="login"
-                    variant=TEXT
-                    className="w-full justify-center md:w-auto border bg-gray-verylight focus:border-primary sm:bg-transparent sm:border-gray-400 sm:text-gray-200 sm:hover:text-primary sm:focus:text-primary"
+                    className="w-full justify-center md:w-auto"
                 >Login</ButtonLarge>
             </div>
         </div>

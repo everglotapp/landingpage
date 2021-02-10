@@ -3,7 +3,7 @@
 	import ButtonLarge from "../comp/util/ButtonLarge.svelte";
 
 	let submitted = false;
-	const handleSubmit = (event: Event) => {
+	const handleSubmit = (_event: Event) => {
 		submitted = true;
 	};
 	let email = "";
@@ -28,7 +28,6 @@
 		</div>
 		<button
 			type="submit"
-			variant=FILLED
 			class="mt-5 py-3 px-10 w-full mb-1 bg-primary hover:bg-primary-bitlight text-white rounded-xl font-bold"
 		>Login</button>
 		<ButtonLarge
@@ -57,10 +56,12 @@ input {
 	@apply py-2;
 	@apply px-3;
 	@apply leading-relaxed;
-	@apply focus:border-gray-300;
-	@apply focus:ring-2;
-	@apply focus:ring-gray-200;
-	@apply focus:ring-opacity-50
+}
+input:focus {
+	@apply border-gray-300;
+	@apply ring-2;
+	@apply ring-gray-200;
+	@apply ring-opacity-50
 }
 input[type="email"]::placeholder {
 	@apply text-gray-bitlight;
