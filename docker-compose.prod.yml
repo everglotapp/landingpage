@@ -2,8 +2,6 @@ version: "3"
 
 services:
     everglot-lp:
-        ports:
-            - "127.0.0.1:3000:3000"
     db:
         image: postgres:13-alpine
         restart: always
