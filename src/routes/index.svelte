@@ -9,6 +9,8 @@
     import group from "images/group.jpg"
     import friends from "images/friends.jpg"
     import books from "images/books.jpg"
+
+    import { BellIcon } from "svelte-feather-icons"
 </script>
 
 <svelte:head>
@@ -152,14 +154,33 @@
     style="--footer-cta-bg:url('')"
 >
     <div
-        class="flex flex-col md:flex-row md:items-center space-y-8 md:space-y-0 md:space-x-8 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-24 relative"
+        class="flex flex-col md:items-center space-y-8 md:space-y-0 md:space-x-8 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-32 relative"
     >
-        <p class="font-bold">Sign up right away!</p>
-        <ButtonLarge
-            href="join"
-            className="w-full justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
-            >Join now!</ButtonLarge
-        >
+        <p class="font-bold text-2xl pb-8">
+            Subscribe to our newsletter to be notified when we launch!
+        </p>
+        <div class="flex flex-col md:flex-row items-center">
+            <input
+                type="email"
+                placeholder="jane.doe@example.com"
+                class="border-none shadow-md m-4 py-4 px-4 rounded-md w-64"
+            />
+            <ButtonLarge
+                href="join"
+                className="w-full py-4 justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
+                ><BellIcon size="24" class="mr-2" /><span
+                    style="line-height: 1.35">Subscribe</span
+                ></ButtonLarge
+            >
+        </div>
+        <div class="flex flex-col md:flex-row hidden">
+            <input type="email" class="py-4 px-4 m-2 rounded-md" />
+            <ButtonLarge
+                href="join"
+                className="w-full justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
+                >Subscribe with Google</ButtonLarge
+            >
+        </div>
     </div>
 </section>
 

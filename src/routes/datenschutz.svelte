@@ -292,7 +292,7 @@
     <h4>Nutzerbeiträge, Kommentare und Bewertungen</h4>
     <p>
         Wir bieten Ihnen an, auf unseren Internetseiten Fragen, Antworten,
-        Meinungen oder Bewertungen, nachfolgend nur „Beiträge genannt, zu
+        Meinungen oder Bewertungen, nachfolgend nur „Beiträge“ genannt, zu
         veröffentlichen. Sofern Sie dieses Angebot in Anspruch nehmen,
         verarbeiten und veröffentlichen wir Ihren Beitrag, Datum und Uhrzeit der
         Einreichung sowie das von Ihnen ggf. genutzte Pseudonym.
