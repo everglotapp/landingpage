@@ -1,6 +1,12 @@
 version: "3"
 
 services:
-    lang:
+    everglot-lp:
+        image: everglot/everglot-lp:latest
+        restart: always
+        working_dir: /usr/src/app
         ports:
             - "127.0.0.1:3000:3000"
+    db:
+        image: postgres:13-alpine
+        restart: always
