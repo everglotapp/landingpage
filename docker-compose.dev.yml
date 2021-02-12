@@ -4,7 +4,7 @@ services:
     everglot-lp:
         entrypoint: "npm run dev"
         volumes:
-            - ./:/usr/src/app
+            - ./:/home/node/app
         environment:
             PGUSER: everglot_lp_user
             PGPASSWORD: everglot_lp_pass

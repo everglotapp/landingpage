@@ -4,6 +4,6 @@ services:
     everglot-lp:
         image: everglot/everglot-lp:latest
         restart: always
-        working_dir: /usr/src/app
+        working_dir: /home/node/app
         ports:
             - "127.0.0.1:3000:3000"
