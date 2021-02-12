@@ -7,3 +7,8 @@ services:
         working_dir: /usr/src/app
         ports:
             - "127.0.0.1:3000:3000"
+        volumes:
+            - ./:/usr/src/app
+    db:
+        image: postgres:13-alpine
+        restart: always

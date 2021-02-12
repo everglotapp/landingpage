@@ -29,6 +29,7 @@
     export let tag: keyof HTMLElementTagNameMap = "a"
     export let href: string = ""
     export let type: string = "button"
+    export let disabled: boolean = false
     $: computedClasses = CLASSES[variant][color]
     export let className: string = ""
 </script>
@@ -37,12 +38,17 @@
     <button
         class={`${computedClasses} ${className}`}
         {type}
+        disabled={disabled ? true : undefined}
         on:click|preventDefault
     >
         <slot />
     </button>
 {:else if tag === "a"}
-    <a class={`${computedClasses} ${className}`} {href}>
+    <a
+        class={`${computedClasses} ${className}`}
+        {href}
+        disabled={disabled ? true : undefined}
+    >
         <slot />
     </a>
 {/if}
@@ -52,6 +58,15 @@
         button,
         a {
             @apply py-3 px-10 inline-flex rounded-xl font-bold cursor-pointer transition-colors;
+        }
+        button:disabled,
+        button[disabled],
+        a:disabled,
+        a[disabled] {
+            @apply cursor-not-allowed;
+            @apply bg-gray;
+            @apply border-gray;
+            @apply text-gray-bitdark;
         }
     }
 </style>
