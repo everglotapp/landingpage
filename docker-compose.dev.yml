@@ -5,3 +5,15 @@ services:
         entrypoint: "npm run dev"
         volumes:
             - ./:/usr/src/app
+        environment:
+            PGUSER: everglot_lp_user
+            PGPASSWORD: everglot_lp_pass
+            PGDATABASE: everglot_lp_db
+            PGHOST: db
+            PGPORT: 5432
+            DATABASE_URL: "postgres://everglot_lp_user:everglot_lp_pass@db:5432/everglot_lp_db"
+    db:
+        environment:
+            POSTGRES_USER: "everglot_lp_user"
+            POSTGRES_PASSWORD: "everglot_lp_pass"
+            POSTGRES_DB: "everglot_lp_db"
