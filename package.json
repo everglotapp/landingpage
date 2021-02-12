@@ -18,6 +18,7 @@
     "validate": "svelte-check --ignore src/node_modules/@sapper --compiler-warnings 'module-script-reactive-declaration:ignore'"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "compression": "^1.7.1",
     "node-pg-migrate": "^5.9.0",
     "pg": "^8.5.1",

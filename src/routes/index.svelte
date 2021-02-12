@@ -18,7 +18,30 @@
     function onSubscribe() {
         if (document.forms["subscribe"].reportValidity()) {
             subscribing = true
-            // TODO: call subscription API
+            fetch("/subscribe/", {
+                method: "post",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                }),
+            })
+                .then((response) => {
+                    if (response.status !== 200) {
+                        return
+                    }
+                    response.json().then((res) => {
+                        if (!res.hasOwnProperty("success")) {
+                            return
+                        }
+                        subscriptionSuccess = res.success === true
+                    })
+                })
+                .then(() => {
+                    subscribing = false
+                })
         }
     }
 </script>
@@ -204,8 +227,9 @@
                 ></ButtonLarge
             >
         </form>
-        <div class="py-4" class:hidden={!subscriptionSuccess}>
-            Thanks for your subscription, please make sure to confirm it!
+        <div class="py-4 font-bold text-lg" class:hidden={!subscriptionSuccess}>
+            Thanks for your subscription, please make sure to confirm it in the
+            mail we just sent you!
         </div>
         <div class="flex flex-col md:flex-row hidden">
             <input type="email" class="py-4 px-4 m-2 rounded-md" />
