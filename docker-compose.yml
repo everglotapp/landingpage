@@ -9,3 +9,17 @@ services:
         working_dir: /home/node/app
         ports:
             - "127.0.0.1:3000:3000"
+        environment:
+            PGUSER: ${PGUSER}
+            PGPASSWORD: ${PGPASSWORD}
+            PGDATABASE: ${PGDATABASE}
+            PGHOST: ${PGHOST}
+            PGPORT: ${PGPORT}
+            DATABASE_URL: "postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}"
+    db:
+        image: postgres:13-alpine
+        restart: always
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_DB: ${POSTGRES_DB}
