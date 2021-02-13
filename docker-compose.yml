@@ -3,6 +3,8 @@ version: "3"
 services:
     everglot-lp:
         image: everglot/everglot-lp:latest
+        build:
+            context: .
         restart: always
         working_dir: /home/node/app
         ports:
