@@ -47,9 +47,8 @@
             >I don't have an account</ButtonLarge
         >
         <div
-            class="py-4 font-bold my-8 px-8 bg-primary-lightest {submitted
-                ? ''
-                : 'hidden'}"
+            class="py-4 font-bold my-8 px-8 bg-primary-lightest"
+            class:hidden={!submitted}
         >
             Sorry, login will be available soon!
         </div>

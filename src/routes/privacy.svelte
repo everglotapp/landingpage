@@ -382,7 +382,7 @@
         @apply py-4;
     }
     ul li {
-        @apply pl-16;
+        @apply pl-8;
         @apply mb-4;
     }
 </style>

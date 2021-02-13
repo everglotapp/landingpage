@@ -35,9 +35,15 @@
             <label for="password">Password</label>
             <input id="password" type="password" bind:value={password} />
         </div>
+        <p class="my-5 text-gray-bitdark text-sm">
+            By signing up you agree to our <a
+                href="/privacy"
+                class="font-normal">privacy policy</a
+            >.
+        </p>
         <button
             type="submit"
-            class="mt-5 py-3 px-10 w-full mb-1 bg-primary hover:bg-primary-bitlight text-white rounded-xl font-bold"
+            class="py-3 px-10 w-full mb-1 bg-primary hover:bg-primary-bitlight text-white rounded-xl font-bold"
             >Create a new account</button
         >
         <ButtonLarge
@@ -47,9 +53,8 @@
             >I already have an account</ButtonLarge
         >
         <div
-            class="py-4 font-bold my-8 px-8 bg-primary-lightest {submitted
-                ? ''
-                : 'hidden'}"
+            class="py-4 font-bold my-8 px-8 bg-primary-lightest"
+            class:hidden={!submitted}
         >
             Sorry, signup will be available soon!
         </div>
