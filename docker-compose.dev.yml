@@ -11,6 +11,8 @@ services:
             PGDATABASE: everglot_lp_db
             PGHOST: db
             PGPORT: 5432
+        ports:
+            - "127.0.0.1:3000:3000"
     db:
         environment:
             POSTGRES_USER: "everglot_lp_user"

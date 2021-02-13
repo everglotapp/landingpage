@@ -7,19 +7,17 @@ services:
             context: .
         restart: always
         working_dir: /home/node/app
-        ports:
-            - "127.0.0.1:3000:3000"
         environment:
-            PGUSER: ${PGUSER}
-            PGPASSWORD: ${PGPASSWORD}
-            PGDATABASE: ${PGDATABASE}
-            PGHOST: ${PGHOST}
-            PGPORT: ${PGPORT}
-            DATABASE_URL: "postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}:${PGPORT}/${PGDATABASE}"
+            PGUSER: ${POSTGRES_USER:?Please set POSTGRES_USER}
+            PGPASSWORD: ${POSTGRES_PASSWORD:?Please set POSTGRES_PASSWORD}
+            PGDATABASE: ${POSTGRES_DB:?Please set POSTGRES_DB}
+            PGHOST: ${PGHOST:-db}
+            PGPORT: ${PGPORT:-5432}
+            DATABASE_URL: "postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${PGHOST:-db}:${PGPORT}/${POSTGRES_DB}"
     db:
         image: postgres:13-alpine
         restart: always
         environment:
-            POSTGRES_USER: ${POSTGRES_USER}
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-            POSTGRES_DB: ${POSTGRES_DB}
+            POSTGRES_USER: ${POSTGRES_USER:?Please set POSTGRES_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Please set POSTGRES_PASSWORD}
+            POSTGRES_DB: ${POSTGRES_DB:?Please set POSTGRES_DB}
