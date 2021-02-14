@@ -7,6 +7,7 @@ export async function post(
     _next: () => void
 ) {
     console.log("subscribe request")
+    // TODO: Handle body encoded as form data as opposed to JSON
     res.setHeader("Content-Type", "application/json")
 
     const ip = parseIp(req)
