@@ -5,10 +5,10 @@
     import headerHome1920 from "images/header-home-1920.jpg"
     import headerHome1280 from "images/header-home-1280.jpg"
     import headerHome1024 from "images/header-home-1024.jpg"
-    import studyCall from "images/study-call.jpg"
-    import group from "images/group.jpg"
-    import friends from "images/friends.jpg"
-    import books from "images/books.jpg"
+    import group1 from "images/group_1.png"
+    import group2 from "images/group_2.png"
+    import friends1 from "images/friends_1.png"
+    import welcome from "images/welcome.png"
 
     import { BellIcon, ArrowDownIcon } from "svelte-feather-icons"
 
@@ -96,22 +96,22 @@
 
 <!-- USP -->
 <section
-    class="container md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 sm:py-16 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0"
+    class="container md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 sm:py-16 2xl:py-24 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0"
 >
     <div
-        class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16"
+        class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-6 sm:py-0 px-4 md:px-auto mb-8 sm:mb-0 lg:mr-16"
     >
         <img
-            id="study-call"
-            src={studyCall}
-            alt="Study call"
-            class="self-start max-w-full shadow-md sm:rounded-lg"
+            id="group"
+            src={group1}
+            alt="Group discussion"
+            class="self-start max-w-full"
         />
     </div>
 
     <div class="md:w-1/2 xl:w-2/3 px-8 md:px-0 py-16 sm:py-0 mb-16 lg:mb-0">
         <h2 class="text-lg text-gray-dark font-bold mb-2">
-            Speaking a foreign tongue can be much easier.
+            Speaking a foreign tongue can be comfortable.
         </h2>
         <p class="mb-4 sm:mb-0">
             Everglots are building the world's most <strong
@@ -139,7 +139,7 @@
                 time when you do.
             </p>
             <div class="feature-image-container">
-                <img src={group} alt="Study group" />
+                <img src={welcome} alt="Welcome" class="px-24 md:px-36" />
             </div>
             <p>
                 Successful study groups live on diversity. Some like teaching,
@@ -156,7 +156,7 @@
                 covered, as live subtitles and amazing tutors are here to help.
             </p>
             <div class="feature-image-container">
-                <img src={books} alt="Library" />
+                <img src={group2} alt="Group" class="py-8 px-16" />
             </div>
             <p>
                 Making mistakes is encouraged. Correcting each other is usually
@@ -171,7 +171,7 @@
                 hang out. And the others are just as friendly.
             </p>
             <div class="feature-image-container">
-                <img src={friends} alt="Friends" />
+                <img src={friends1} alt="Friends" class="px-16 md:px-24 py-8" />
             </div>
             <p>
                 The best way to learn anything is to enjoy the process. After
@@ -292,7 +292,7 @@
             background-position: 242px;
         }
     }
-    #study-call {
+    #group {
         @screen sm {
             max-width: 340px;
         }
@@ -308,11 +308,9 @@
         @apply my-6;
         @apply text-center;
         @apply w-full;
-        @apply bg-gray-verylight;
         @apply text-gray-bitdark;
         @apply italic;
         @apply rounded-lg;
-        @apply shadow-md;
         @apply overflow-hidden;
         width: 100%;
         max-height: 296px;
@@ -320,12 +318,11 @@
             max-height: 241px;
         }
         @screen 2xl {
-            max-height: 296px;
+            max-height: 270px;
         }
     }
     section.features .feature-image-container img {
         @apply self-start;
         @apply max-w-full;
-        @apply shadow-md;
     }
 </style>
