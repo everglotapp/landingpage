@@ -15,13 +15,14 @@ jobs:
     - name: Checkout main
       uses: actions/checkout@v2
       with:
-        path: main
+        ref: main
 
     - name: Checkout k8s-setup repo
       uses: actions/checkout@v2
       with:
         repository: everglot/k8s-setup
         path: k8s-setup
+        ref: main
 
     - name: Build container image
       run: docker build -t registry.digitalocean.com/everglot/landingpage .
