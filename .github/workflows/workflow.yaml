@@ -42,7 +42,10 @@ jobs:
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 k8s-1-20-2-do-0-ams3-1612982708095
 
-    - name: Inject Kubernetes Secrets from Github Secrets
+    - name: Delete Postgres Kubernetes Secrets if existed
+      run: kubectl delete secret postgres --ignore-not-found
+
+    - name: Inject Postgres Kubernetes Secrets from Github Secrets
       run: kubectl create secret generic postgres --from-literal=postgres-password='${{ secrets.PGPASSWORD }}'
 
     - name: Deploy to DigitalOcean Kubernetes
