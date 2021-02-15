@@ -190,8 +190,8 @@
         class="flex flex-col md:items-center space-y-2 md:space-y-4 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-32 relative"
     >
         <p class="font-bold text-2xl md:text-center text-gray-dark">
-            Subscribe to our early access list<br class="hidden md:inline" />
-            to be notified when we launch!
+            Subscribe to our early access list,<br class="hidden md:inline" />
+            you'll be notified when we launch!
         </p>
         <div>
             <ArrowDownIcon size="24" class="text-gray mx-auto" />
