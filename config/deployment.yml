@@ -26,6 +26,7 @@ spec:
       containers:
       - name: everglot-lp
         image: registry.digitalocean.com/everglot/landingpage
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         env:
