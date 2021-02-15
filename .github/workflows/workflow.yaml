@@ -2,24 +2,26 @@ on:
   push:
     branches:
       - main
-    # paths:
-    #   - 'config/**'
-    #   - 'site/**'
-    #   - 'Dockerfile'
-    #   - '.github/workflows/**'
+    pull_request:
+      branches:
+      - main
 
 jobs:
-
   build:
     name: Build, Push and Deploy
     runs-on: ubuntu-latest
     steps:
 
     - name: Checkout main
-      uses: actions/checkout@main
+      uses: actions/checkout@v2
+      with:
+        path: main
 
-    # - name: Update SHA
-    #   run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/site/_meta
+    - name: Checkout k8s-setup repo
+      uses: actions/checkout@v2
+      with:
+        repository: everglot/k8s-setup
+        path: k8s-setup
 
     - name: Build container image
       run: docker build -t registry.digitalocean.com/everglot/landingpage .
@@ -35,14 +37,11 @@ jobs:
     - name: Push image to DigitalOcean Container Registry
       run: docker push registry.digitalocean.com/everglot/landingpage
 
-    # - name: Update deployment file
-    #   run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/everglot/landingpage:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
-
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 k8s-1-20-2-do-0-ams3-1612982708095
 
     - name: Deploy to DigitalOcean Kubernetes
-      run: kubectl apply -f $GITHUB_WORKSPACE/config/deployment.yml
+      run: kubectl apply -f $GITHUB_WORKSPACE/k8s-setup/landingpage/service-deployment.yml
 
     - name: Verify deployment
       run: kubectl rollout status deployment/everglot-lp
