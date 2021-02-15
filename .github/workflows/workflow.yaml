@@ -11,11 +11,11 @@ on:
 jobs:
 
   build:
-    name: Build, push, and deploy
+    name: Build, Push and Deploy
     runs-on: ubuntu-latest
     steps:
 
-    - name: Checkout master
+    - name: Checkout main
       uses: actions/checkout@main
 
     # - name: Update SHA
@@ -39,7 +39,7 @@ jobs:
     #   run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/everglot/landingpage:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
-      run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 actions-example-k8s-1-18
+      run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 k8s-1-20-2-do-0-ams3-1612982708095
 
     - name: Deploy to DigitalOcean Kubernetes
       run: kubectl apply -f $GITHUB_WORKSPACE/config/deployment.yml
