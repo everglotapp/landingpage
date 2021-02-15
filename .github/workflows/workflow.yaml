@@ -22,7 +22,7 @@ jobs:
     #   run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/site/_meta
 
     - name: Build container image
-      run: docker build -t registry.digitalocean.com/everglot/landingpage:$(echo $GITHUB_SHA | head -c7) .
+      run: docker build -t registry.digitalocean.com/everglot/landingpage
 
     - name: Install doctl
       uses: digitalocean/action-doctl@v2.1.0
@@ -35,8 +35,8 @@ jobs:
     - name: Push image to DigitalOcean Container Registry
       run: docker push registry.digitalocean.com/everglot/landingpage
 
-    - name: Update deployment file
-      run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/everglot/landingpage:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
+    # - name: Update deployment file
+    #   run: TAG=$(echo $GITHUB_SHA | head -c7) && sed -i 's|<IMAGE>|registry.digitalocean.com/everglot/landingpage:'${TAG}'|' $GITHUB_WORKSPACE/config/deployment.yml
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 actions-example-k8s-1-18
