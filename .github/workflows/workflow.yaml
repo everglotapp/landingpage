@@ -21,6 +21,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: everglotapp/k8s-setup
+        token: ${{ secrets.GH_ACCESS_TOKEN }}
         path: k8s-setup
         ref: main
 
