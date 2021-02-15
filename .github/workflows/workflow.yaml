@@ -22,7 +22,7 @@ jobs:
     #   run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/site/_meta
 
     - name: Build container image
-      run: docker build -t registry.digitalocean.com/everglot/landingpage
+      run: docker build -t registry.digitalocean.com/everglot/landingpage .
 
     - name: Install doctl
       uses: digitalocean/action-doctl@v2.1.0
