@@ -26,7 +26,7 @@ jobs:
         ref: main
 
     - name: Build container image
-      run: docker build -t registry.digitalocean.com/everglot/landingpage .
+      run: docker build -t registry.digitalocean.com/everglot/landingpage:latest .
 
     - name: Install doctl
       uses: digitalocean/action-doctl@v2.1.0
@@ -37,7 +37,7 @@ jobs:
       run: doctl registry login --expiry-seconds 600
 
     - name: Push image to DigitalOcean Container Registry
-      run: docker push registry.digitalocean.com/everglot/landingpage
+      run: docker push registry.digitalocean.com/everglot/landingpage:latest
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 k8s-1-20-2-do-0-ams3-1612982708095
