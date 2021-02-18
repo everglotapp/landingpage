@@ -10,8 +10,12 @@ export async function post(
     // TODO: Handle body encoded as form data as opposed to JSON
     res.setHeader("Content-Type", "application/json")
 
+    console.log(req);
+
+    console.log("Parsing ip")
     const ip = parseIp(req)
     // TODO: validate email
+
     if (!req.body || !req.body.email) {
         res.end(JSON.stringify({ success: false }))
         return
