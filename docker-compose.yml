@@ -21,3 +21,8 @@ services:
             POSTGRES_USER: ${POSTGRES_USER:?Please set POSTGRES_USER}
             POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Please set POSTGRES_PASSWORD}
             POSTGRES_DB: ${POSTGRES_DB:?Please set POSTGRES_DB}
+
+networks:
+    default:
+        external:
+            name: everglot-network
