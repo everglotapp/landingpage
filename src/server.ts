@@ -3,13 +3,12 @@ import polka from "polka"
 import compression from "compression"
 import * as sapper from "@sapper/server"
 import { createDatabasePool } from "./server/db"
-import type { Pool } from "pg"
-const { json } = require("body-parser")
+import { json } from "body-parser"
 
 const { PORT, NODE_ENV } = process.env
 const dev = NODE_ENV === "development"
 
-const pool: Pool = createDatabasePool()
+const pool = createDatabasePool()
 pool.connect().then(() => {
     console.log("[Database Pool] Database connection established")
 })
