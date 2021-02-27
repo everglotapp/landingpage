@@ -47,7 +47,7 @@
 </script>
 
 <svelte:head>
-    <title>Everglot – Language Community</title>
+    <title>Everglot – The Language Community</title>
 </svelte:head>
 
 <ScrollDownArrow />
