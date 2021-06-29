@@ -8,7 +8,12 @@
             <a
                 aria-current={segment === undefined ? "page" : undefined}
                 class="logo font-bold uppercase tracking-wide text-lg"
-                href=".">Everglot</a
+                href="."
+                ><img
+                    src="/logo-192.png"
+                    alt="Everglot"
+                    style="max-height: 28px;"
+                /></a
             >
         </li>
         <!-- <li class="ml-auto">
