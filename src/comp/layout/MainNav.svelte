@@ -39,10 +39,7 @@
             >
         </li>
         <li>
-            <a
-                aria-current={segment === "login" ? "page" : undefined}
-                href="login">Login</a
-            >
+            <a href="https://app.everglot.com/login">Login</a>
         </li>
     </ul>
 </nav>
