@@ -78,14 +78,14 @@
         <div class="md:w-1/2">
             <div class="p-6 z-10">
                 <ButtonLarge
-                    href="join"
+                    href="#footer-cta"
                     className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
                     >Join now!</ButtonLarge
                 >
                 <ButtonLarge
                     variant="OUTLINED"
                     color="SECONDARY"
-                    href="login"
+                    href="https://app.everglot.com/login"
                     className="w-full justify-center md:w-auto"
                     >Login</ButtonLarge
                 >

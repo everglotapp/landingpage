@@ -11,8 +11,13 @@ services:
             PGDATABASE: everglot_lp_db
             PGHOST: db
             PGPORT: 5432
+            NODE_ENV: "development"
+            NODE_OPTIONS: "--max_old_space_size=8192"
+            ROARR_LOG: "true"
+            HOST: "0.0.0.0"
+            PORT: "3000"
         ports:
-            - "127.0.0.1:3000:3000"
+            - "0.0.0.0:3000:3000"
     db:
         environment:
             POSTGRES_USER: "everglot_lp_user"

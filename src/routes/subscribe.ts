@@ -1,11 +1,7 @@
 import { db } from "../server/db"
-import type { SapperRequest, SapperResponse } from "@sapper/server"
+import type { Request, Response } from "express"
 
-export async function post(
-    req: SapperRequest & { body: any },
-    res: SapperResponse,
-    _next: () => void
-) {
+export async function post(req: Request, res: Response, _next: () => void) {
     console.log("subscribe request")
     // TODO: Handle body encoded as form data as opposed to JSON
     res.setHeader("Content-Type", "application/json")
@@ -20,8 +16,7 @@ export async function post(
         return
     }
     const queryResult = await db?.query({
-        text:
-            "INSERT INTO newsletter_subscriptions(email, ip) VALUES($1, $2) RETURNING *",
+        text: "INSERT INTO newsletter_subscriptions(email, ip) VALUES($1, $2) RETURNING *",
         values: [req.body.email, ip],
     })
     res.end(
@@ -29,9 +24,10 @@ export async function post(
     )
 }
 
-const parseIp = (req) =>
+const parseIp = (req: Request) =>
     (typeof req.headers["x-forwarded-for"] === "string" &&
         req.headers["x-forwarded-for"].split(",").shift()) ||
     req.connection?.remoteAddress ||
     req.socket?.remoteAddress ||
+    // @ts-expect-error
     req.connection?.socket?.remoteAddress
