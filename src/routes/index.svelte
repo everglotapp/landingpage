@@ -5,10 +5,10 @@
     import headerHome1920 from "images/header-home-1920.jpg"
     import headerHome1280 from "images/header-home-1280.jpg"
     import headerHome1024 from "images/header-home-1024.jpg"
-    import studyCall from "images/study-call.jpg"
-    import group from "images/group.jpg"
-    import friends from "images/friends.jpg"
-    import books from "images/books.jpg"
+    import chat from "images/chat.png"
+    import group from "images/group.png"
+    import hangman from "images/hangman.png"
+    import chatGame from "images/chatGame.png"
 
     import { BellIcon, ArrowDownIcon } from "svelte-feather-icons"
 
@@ -96,9 +96,9 @@
         class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16"
     >
         <img
-            id="study-call"
-            src={studyCall}
-            alt="Study call"
+            id="chat"
+            src={chat}
+            alt="chat"
             class="self-start max-w-full shadow-md sm:rounded-lg"
         />
     </div>
@@ -142,7 +142,7 @@
                 Get the ball rolling with conversation prompts and role-play scenarios. Receive feedback and tips from native speakers.
             </p>
             <div class="feature-image-container">
-                <img src={books} alt="Library" />
+                <img src={chatGame} alt="chatGame" />
             </div>
             <p>
                 Making mistakes is encouraged. Correcting each other is usually
@@ -156,7 +156,7 @@
                 Play language games with your fellow learners and make some new friends!
             </p>
             <div class="feature-image-container">
-                <img src={friends} alt="Friends" />
+                <img src={hangman} alt="hangman" />
             </div>
             <p>
                 The best way to learn anything is to enjoy the process. After
