@@ -3,7 +3,8 @@
 </script>
 
 <footer
-    class="container flex flex-col-reverse sm:flex-row sm:justify-between mx-auto py-4 md:py-8 px-8 text-gray-bitdark"
+    class="container flex flex-col-reverse sm:flex-row sm:justify-between mx-auto py-4 md:py-8 px-8 text-gray-lightest"
+    class:index={typeof segment === undefined}
 >
     <div
         class="flex self-center sm:space-x-8 sm:justify-start flex-col sm:flex-row"
@@ -24,10 +25,15 @@
 </footer>
 
 <style>
+    footer.index {
+        background: #016fa5;
+    }
+
     a {
-        @apply text-gray-bitdark;
+        @apply text-gray-verylight;
         @apply mb-3;
     }
+
     a[aria-current] {
         @apply text-primary;
     }

@@ -38,7 +38,8 @@
 <style>
     main {
         position: relative;
-        background-color: white;
         box-sizing: border-box;
+
+        @apply text-gray-lightest;
     }
 </style>
