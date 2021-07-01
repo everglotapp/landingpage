@@ -1,5 +1,9 @@
 <script lang="ts">
     import ButtonLarge from "../util/ButtonLarge.svelte"
+
+    import { inviteToken } from "../../stores"
+    import { APP_BASE_URL } from "../../constants"
+
     export let segment: string | undefined
 </script>
 
@@ -40,11 +44,17 @@
             >
         </li>-->
         <li class="ml-auto">
-            <a href="https://app.everglot.com/login">Login</a>
+            <a
+                href={$inviteToken === null
+                    ? `${APP_BASE_URL}/login`
+                    : `${APP_BASE_URL}/login?token=${$inviteToken}`}>Login</a
+            >
         </li>
         <li>
             <ButtonLarge
-                href="/#footer-cta"
+                href={$inviteToken === null
+                    ? "/#footer-cta"
+                    : `${APP_BASE_URL}/join?token=${$inviteToken}`}
                 className="cta text-sm uppercase ml-2 mb-0 whitespace-nowrap"
                 >Join now</ButtonLarge
             >

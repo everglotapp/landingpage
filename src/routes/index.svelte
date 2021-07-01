@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte"
-    import { BellIcon, ArrowDownIcon } from "svelte-feather-icons"
+    import { BellIcon, ArrowDownIcon, ArrowUpIcon } from "svelte-feather-icons"
 
     import ButtonLarge from "../comp/util/ButtonLarge.svelte"
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte"
@@ -11,6 +11,9 @@
     import hangman from "images/hangman.png"
     import liveAudio from "images/live-audio.png"
     import stars from "images/stars.png"
+
+    import { inviteToken } from "../stores"
+    import { APP_BASE_URL } from "../constants"
 
     let email = ""
     let subscriptionSuccess: Boolean | undefined
@@ -49,6 +52,11 @@
         document
             .getElementById("sapper")!
             .setAttribute("style", `--stars: url('${stars}');`)
+        if ($inviteToken === null) {
+            $inviteToken = new URL(window.location.href).searchParams.get(
+                "token"
+            )
+        }
     })
 </script>
 
@@ -78,14 +86,18 @@
             <div class="md:w-1/2">
                 <div class="hero-buttons text-center p-6 z-10">
                     <ButtonLarge
-                        href="#footer-cta"
+                        href={$inviteToken === null
+                            ? "#footer-cta"
+                            : `${APP_BASE_URL}/join?token=${$inviteToken}`}
                         className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
                         >Join now</ButtonLarge
                     >
                     <ButtonLarge
                         variant="OUTLINED"
                         color="SECONDARY"
-                        href="https://app.everglot.com/login"
+                        href={$inviteToken === null
+                            ? `${APP_BASE_URL}/login`
+                            : `${APP_BASE_URL}/login?token=${$inviteToken}`}
                         className="w-full justify-center md:w-auto"
                         >Login</ButtonLarge
                     >
@@ -215,65 +227,86 @@
         <div
             class="flex flex-col md:items-center space-y-2 md:space-y-4 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-32 relative"
         >
-            <p class="font-bold text-2xl md:text-center text-gray-lightest">
-                Subscribe to our early access list,<br
-                    class="hidden md:inline"
-                />
-                you'll be notified when we launch!
-            </p>
-            <div>
-                <ArrowDownIcon size="24" class="text-gray mx-auto" />
-            </div>
-            <form
-                class="flex flex-col md:flex-row items-end"
-                name="subscribe"
-                action="/subscribe"
-                on:submit|preventDefault={onSubscribe}
-            >
-                <div class="inline-flex flex-col w-full">
-                    <label
-                        for="subscribe_email"
-                        class="font-bold text-gray-verylight">Email</label
-                    >
-                    <input
-                        id="subscribe_email"
-                        type="email"
-                        required
-                        placeholder="jane.doe@example.com"
-                        class="border-none shadow-md mb-4 md:mb-0 md:mr-4 py-4 px-4 rounded-md w-full md:w-64"
-                        bind:value={email}
+            {#if $inviteToken === null}
+                <p class="font-bold text-2xl md:text-center text-gray-lightest">
+                    Subscribe to our early access list,<br
+                        class="hidden md:inline"
                     />
+                    you'll be notified when we launch!
+                </p>
+                <div>
+                    <ArrowDownIcon size="24" class="text-gray mx-auto" />
                 </div>
-                <ButtonLarge
-                    tag="button"
-                    on:click={onSubscribe}
-                    disabled={subscribing ||
-                        typeof subscriptionSuccess !== "undefined"}
-                    className="w-full justify-center text-lg md:w-auto mb-3 md:mb-1 md:mr-1"
-                    type="submit"
-                    ><BellIcon size="24" class="mr-2" /><span
-                        style="line-height: 1.35">Subscribe</span
-                    ></ButtonLarge
+                <form
+                    class="flex flex-col md:flex-row items-end"
+                    name="subscribe"
+                    action="/subscribe"
+                    on:submit|preventDefault={onSubscribe}
                 >
-            </form>
-            <div
-                class="py-4 font-bold text-lg"
-                class:hidden={!subscriptionSuccess}
-            >
-                Thanks for your subscription, please make sure to confirm it in
-                the mail we just sent you!
-            </div>
-            <div class="flex flex-col md:flex-row hidden">
-                <input type="email" class="py-4 px-4 m-2 rounded-md" />
-                <ButtonLarge
-                    tag="button"
-                    on:click={onSubscribe}
-                    disabled={subscribing ||
-                        typeof subscriptionSuccess !== "undefined"}
-                    className="w-full justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
-                    >Subscribe with Google</ButtonLarge
-                >
-            </div>
+                    <div class="inline-flex flex-col w-full">
+                        <label
+                            for="subscribe_email"
+                            class="font-bold text-gray-verylight">Email</label
+                        >
+                        <input
+                            id="subscribe_email"
+                            type="email"
+                            required
+                            placeholder="jane.doe@example.com"
+                            class="border-none shadow-md mb-4 md:mb-0 md:mr-4 py-4 px-4 rounded-md w-full md:w-64"
+                            bind:value={email}
+                        />
+                    </div>
+                    <ButtonLarge
+                        tag="button"
+                        on:click={onSubscribe}
+                        disabled={subscribing ||
+                            typeof subscriptionSuccess !== "undefined"}
+                        className="w-full justify-center text-lg md:w-auto mb-3 md:mb-1 md:mr-1"
+                        type="submit"
+                        ><BellIcon size="24" class="mr-2" /><span
+                            style="line-height: 1.35">Subscribe</span
+                        ></ButtonLarge
+                    >
+                </form>
+                {#if false}
+                    <div
+                        class="py-4 font-bold text-lg"
+                        class:hidden={!subscriptionSuccess}
+                    >
+                        Thanks for your subscription, please make sure to
+                        confirm it in the mail we just sent you!
+                    </div>
+                    <div class="flex flex-col md:flex-row hidden">
+                        <input type="email" class="py-4 px-4 m-2 rounded-md" />
+                        <ButtonLarge
+                            tag="button"
+                            on:click={onSubscribe}
+                            disabled={subscribing ||
+                                typeof subscriptionSuccess !== "undefined"}
+                            className="w-full justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
+                            >Subscribe with Google</ButtonLarge
+                        >
+                    </div>
+                {/if}
+            {:else}
+                <p class="font-bold text-2xl md:text-center text-gray-lightest">
+                    Click this button to sign up for free!
+                </p>
+                <div>
+                    <ArrowDownIcon size="24" class="text-gray mx-auto" />
+                </div>
+                <div class="flex flex-col md:flex-row items-end py-8">
+                    <ButtonLarge
+                        href={`${APP_BASE_URL}/join?token=${$inviteToken}`}
+                        className="w-full justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
+                        >Join now</ButtonLarge
+                    >
+                </div>
+                <div>
+                    <ArrowUpIcon size="24" class="text-gray mx-auto" />
+                </div>
+            {/if}
         </div>
     </section>
 </div>
