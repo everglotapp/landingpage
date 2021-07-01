@@ -3,13 +3,31 @@
 </script>
 
 <footer
-    class="container flex flex-col-reverse sm:flex-row sm:justify-between mx-auto py-4 md:py-8 px-8 text-gray-lightest"
+    class="container flex flex-col-reverse sm:flex-row sm:justify-between mx-auto py-4 md:py-8 px-8 space-y-2 md:space-y-0 text-gray-lightest"
     class:index={typeof segment === undefined}
 >
     <div
-        class="flex self-center sm:space-x-8 sm:justify-start flex-col sm:flex-row"
+        class="flex self-center items-baseline sm:space-x-2 sm:justify-start flex-col-reverse sm:flex-row mt-8 sm:mt-0"
     >
-        <span>&copy; 2021 Everglot.</span>
+        <span class="mt-2 sm:mt-0">&copy; 2021 Everglot.</span><span
+            class="text-gray-bitlight text-sm"
+            >Squirrel image made by <a
+                href="https://www.flaticon.com/authors/smashicons"
+                title="Smashicons"
+                class="font-normal">Smashicons</a
+            >
+            from
+            <a
+                href="https://www.flaticon.com/"
+                title="Flaticon"
+                class="font-normal">www.flaticon.com</a
+            >. Face icons made by
+            <a
+                href="https://www.joypixels.com"
+                title="EmojiOne"
+                class="font-normal">EmojiOne</a
+            >.</span
+        >
     </div>
     <div
         class="flex self-center sm:space-x-8 sm:justify-end flex-col sm:flex-row"

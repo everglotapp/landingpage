@@ -1,29 +1,29 @@
 <script lang="ts">
-    let previousScrollTop: Number;
-    let scrolledDown = false;
+    let previousScrollTop: Number
+    let scrolledDown = false
     const handleScroll = (e: any) => {
         if (scrolledDown) {
-            return;
+            return
         }
         if (e.scrollTop <= 0) {
             // user cannot possibly have scrolled down
-            return;
+            return
         }
         if (previousScrollTop) {
             if (e.scrollTop <= previousScrollTop) {
                 // user did not scroll down
-                previousScrollTop = e.scrollTop;
-                return;
+                previousScrollTop = e.scrollTop
+                return
             }
         }
-        previousScrollTop = e.scrollTop;
-        scrolledDown = true;
-    };
+        previousScrollTop = e.scrollTop
+        scrolledDown = true
+    }
 </script>
 
 <svelte:window on:scroll={handleScroll} />
 {#if !scrolledDown}
-    <div class="arrow hidden md:block"></div>
+    <div class="arrow hidden md:block" />
 {/if}
 
 <style>
@@ -39,8 +39,8 @@
 
     .arrow:before,
     .arrow:after {
-        @apply bg-gray-bitlight;
-        content: '';
+        @apply bg-gray-lightest;
+        content: "";
         display: block;
         height: 3px;
         position: absolute;
