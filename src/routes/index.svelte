@@ -148,7 +148,7 @@
                             class="shadow-md mb-8"
                         />
                         <div class="md:text-right text-xl">
-                            <p>and we’ll find you a suitable study group</p>
+                            <p>and we’ll find you a suitable study group.</p>
                         </div>
                     </div>
                 </div>
@@ -165,8 +165,7 @@
                     >
                         <p class="text-xl" style="max-width: 300px;">
                             Get the ball rolling with conversation prompts and
-                            role-play scenarios. Receive feedback and tips from
-                            native speakers.
+                            role-play scenarios.
                         </p>
                     </div>
                     <div class="md:w-1/3 feature-image-container">
@@ -176,9 +175,7 @@
                         class="md:w-1/3 md:text-center flex flex-col justify-center items-start px-4 md:px-0 md:pl-8"
                     >
                         <p class="text-xl" style="max-width: 300px;">
-                            Making mistakes is encouraged. Correcting each other
-                            is usually helpful as well, provided that it's
-                            constructive!
+                            Receive feedback and tips from native speakers.
                         </p>
                     </div>
                 </div>
