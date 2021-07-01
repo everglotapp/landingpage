@@ -7,9 +7,10 @@
     class:index={typeof segment === undefined}
 >
     <div
-        class="flex self-center sm:space-x-1 sm:justify-start flex-col sm:flex-row"
+        class="flex self-center items-baseline sm:space-x-1 sm:justify-start flex-col-reverse sm:flex-row mt-8 sm:mt-0"
     >
-        <span>&copy; 2021 Everglot.</span><span class="text-gray-bitlight"
+        <span class="mt-2 sm:mt-0">&copy; 2021 Everglot.</span><span
+            class="text-gray-bitlight text-sm"
             >Squirrel image made by <a
                 href="https://www.flaticon.com/authors/smashicons"
                 title="Smashicons"
@@ -20,6 +21,11 @@
                 href="https://www.flaticon.com/"
                 title="Flaticon"
                 class="font-normal">www.flaticon.com</a
+            >. Face icons made by
+            <a
+                href="https://www.joypixels.com"
+                title="EmojiOne"
+                class="font-normal">EmojiOne</a
             >.</span
         >
     </div>

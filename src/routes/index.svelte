@@ -6,6 +6,7 @@
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte"
     import chat from "images/chat.png"
     import group from "images/group.png"
+    import groupSort from "images/group-sort.png"
     import hangman from "images/hangman.png"
     import chatGame from "images/chat-game.png"
     import stars from "images/stars.png"
@@ -108,7 +109,7 @@
         </div>
 
         <div
-            class="md:w-1/2px-8 md:px-0 md:max-w-sm py-16 sm:py-0 mb-16 lg:mb-0"
+            class="md:w-1/2px-8 md:px-0 md:max-w-sm py-16 sm:py-0 mb-16 lg:mb-0 px-4"
         >
             <p class="text-xl max-w-sm sm:mb-0m mb-4 text-center">
                 Language learning is a long-term journey. With any adventure, it
@@ -124,48 +125,71 @@
     <!-- Features -->
     <section class="py-8 relative features">
         <div
-            class="flex container flex-col md:flex-row mx-auto py-8 md:py-16 px-4 lg:px-8 gap-2 md:space-x-8"
+            class="flex container flex-col mx-auto py-8 md:py-16 px-4 lg:px-8 gap-2 md:space-x-8"
         >
-            <div class="md:w-1/3 mb-16 md:mb-0">
-                <h3>Get a group that fits your own schedule</h3>
-                <p>
-                    Even if you're really busy, you can always find people who
-                    have time when you do.
-                </p>
-                <div class="feature-image-container">
-                    <img src={group} alt="Study group" />
+            <div class="feature mb-16 md:mb-0">
+                <h3>Find a study group that fits your goals and schedule</h3>
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-2/3 feature-image-container group-sort">
+                        <img
+                            src={groupSort}
+                            alt="You are sorted into groups based on your language skills"
+                            style="margin-top: -74px; margin-bottom: 24px;"
+                        />
+                        <div class="md:text-right text-xl md:pr-24">
+                            <p>Tell us what you need...</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/3 feature-image-container">
+                        <img
+                            src={group}
+                            alt="Your study group is divided into native speakers and learners"
+                            class="shadow-md mb-8"
+                        />
+                        <div class="md:text-right text-xl">
+                            <p>and we’ll find you a suitable study group</p>
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    Successful study groups live on diversity. Some like
-                    teaching, others focus on studying or simply keep the spirit
-                    up <span aria-label="wink">😉</span>
-                </p>
             </div>
 
-            <div class="md:w-1/3 mb-16 md:mb-0">
+            <div class="feature mb-16 md:mb-0">
                 <h3>
-                    Practice language with native speakers and fellow learners
+                    Practice your target language with native speakers and
+                    fellow learners
                 </h3>
-                <p>
-                    Get the ball rolling with conversation prompts and role-play
-                    scenarios. Receive feedback and tips from native speakers.
-                </p>
-                <div class="feature-image-container">
-                    <img src={chatGame} alt="chatGame" />
+                <div class="flex flex-col md:flex-row">
+                    <div
+                        class="md:w-1/3 md:text-center flex flex-col justify-center items-end px-4 md:px-0 md:pr-8"
+                    >
+                        <p class="text-xl" style="max-width: 300px;">
+                            Get the ball rolling with conversation prompts and
+                            role-play scenarios. Receive feedback and tips from
+                            native speakers.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 feature-image-container">
+                        <img src={chatGame} alt="chatGame" />
+                    </div>
+                    <div
+                        class="md:w-1/3 md:text-center flex flex-col justify-center items-start px-4 md:px-0 md:pl-8"
+                    >
+                        <p class="text-xl" style="max-width: 300px;">
+                            Making mistakes is encouraged. Correcting each other
+                            is usually helpful as well, provided that it's
+                            constructive!
+                        </p>
+                    </div>
                 </div>
-                <p>
-                    Making mistakes is encouraged. Correcting each other is
-                    usually helpful as well, provided that it's constructive!
-                </p>
             </div>
 
-            <div class="md:w-1/3 mb-16 md:mb-0">
+            <div class="feature mb-16 md:mb-0">
                 <h3>Learn with the aid of games</h3>
                 <p>
                     Play language games with your fellow learners and make some
                     new friends!
                 </p>
-                <div class="feature-image-container">
+                <div class="md:w-1/2 feature-image-container">
                     <img src={hangman} alt="hangman" />
                 </div>
                 <p>
@@ -312,17 +336,28 @@
         text-transform: uppercase;
     }
 
-    h3 {
-        @apply text-lg;
+    section.features {
+        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    section.features h3 {
+        @apply text-2xl;
         @apply uppercase;
         @apply font-bold;
-        @apply mb-2;
+        @apply text-center;
+        @apply mb-8;
 
         font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    :global(p) {
-        font-size: 1.05rem;
+    section.features .feature {
+        @apply pt-8;
+        @apply pb-8;
+
+        @screen md {
+            @apply pt-16;
+            @apply pb-16;
+        }
     }
 
     section.usp {
@@ -331,25 +366,18 @@
 
     section.features .feature-image-container {
         @apply my-6;
-        @apply text-center;
-        @apply w-full;
-        @apply italic;
         @apply rounded-lg;
-        @apply shadow-md;
         @apply overflow-hidden;
-        width: 100%;
-        max-height: 296px;
-        @screen md {
-            max-height: 241px;
-        }
-        @screen 2xl {
-            max-height: 296px;
-        }
     }
 
     section.features .feature-image-container img {
         @apply self-start;
         @apply max-w-full;
-        @apply shadow-md;
+    }
+
+    .group-sort img {
+        @screen lg {
+            margin-bottom: 71px !important;
+        }
     }
 </style>
