@@ -45,7 +45,7 @@
         <li>
             <ButtonLarge
                 href="/#footer-cta"
-                className="cta text-sm uppercase ml-2 mb-0"
+                className="cta text-sm uppercase ml-2 mb-0 whitespace-nowrap"
                 >Join now</ButtonLarge
             >
         </li>
