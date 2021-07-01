@@ -7,8 +7,9 @@
     import chat from "images/chat.png"
     import group from "images/group.png"
     import groupSort from "images/group-sort.png"
-    import hangman from "images/hangman.png"
     import chatGame from "images/chat-game.png"
+    import hangman from "images/hangman.png"
+    import liveAudio from "images/live-audio.png"
     import stars from "images/stars.png"
 
     let email = ""
@@ -185,18 +186,29 @@
 
             <div class="feature mb-16 md:mb-0">
                 <h3>Learn with the aid of games</h3>
-                <p>
-                    Play language games with your fellow learners and make some
-                    new friends!
-                </p>
-                <div class="md:w-1/2 feature-image-container">
-                    <img src={hangman} alt="hangman" />
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 feature-image-container">
+                        <img
+                            src={hangman}
+                            alt="hangman"
+                            class="shadow-md mb-8 md:ml-auto md:mr-24"
+                        />
+                        <div class="text-center text-xl">
+                            <p class="text-xl">Language Games</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 feature-image-container">
+                        <img
+                            src={liveAudio}
+                            alt="Everglot allows voice chats"
+                            class="mb-8"
+                            style="margin-top: 32px;"
+                        />
+                        <div class="text-center text-xl">
+                            <p class="text-xl">Live Audio</p>
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    The best way to learn anything is to enjoy the process.
-                    After making new friends you'll never want to skip a session
-                    again!
-                </p>
             </div>
         </div>
     </section>

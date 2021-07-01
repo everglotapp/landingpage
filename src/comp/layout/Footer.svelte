@@ -7,7 +7,7 @@
     class:index={typeof segment === undefined}
 >
     <div
-        class="flex self-center items-baseline sm:space-x-1 sm:justify-start flex-col-reverse sm:flex-row mt-8 sm:mt-0"
+        class="flex self-center items-baseline sm:space-x-2 sm:justify-start flex-col-reverse sm:flex-row mt-8 sm:mt-0"
     >
         <span class="mt-2 sm:mt-0">&copy; 2021 Everglot.</span><span
             class="text-gray-bitlight text-sm"
