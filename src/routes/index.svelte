@@ -1,22 +1,20 @@
 <script lang="ts">
+    import { onMount } from "svelte"
+    import { BellIcon, ArrowDownIcon } from "svelte-feather-icons"
+
     import ButtonLarge from "../comp/util/ButtonLarge.svelte"
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte"
-    // import heart from "images/heart.svg"
-    import headerHome1920 from "images/header-home-1920.jpg"
-    import headerHome1280 from "images/header-home-1280.jpg"
-    import headerHome1024 from "images/header-home-1024.jpg"
     import chat from "images/chat.png"
     import group from "images/group.png"
     import hangman from "images/hangman.png"
     import chatGame from "images/chat-game.png"
-
-    import { BellIcon, ArrowDownIcon } from "svelte-feather-icons"
+    import stars from "images/stars.png"
 
     let email = ""
     let subscriptionSuccess: Boolean | undefined
     let subscribing = false
     function onSubscribe() {
-        if (document.forms["subscribe"].reportValidity()) {
+        if ((document.forms["subscribe"] as HTMLFormElement).reportValidity()) {
             subscribing = true
             fetch("/subscribe/", {
                 method: "post",
@@ -44,6 +42,12 @@
                 })
         }
     }
+
+    onMount(() => {
+        document
+            .getElementById("sapper")!
+            .setAttribute("style", `--stars: url('${stars}');`)
+    })
 </script>
 
 <svelte:head>
@@ -54,31 +58,27 @@
 
 <div id="wrapper">
     <!-- Header -->
-    <section
-        id="hero"
-        class="bg-gray-600 shadow-md relative"
-        style="--header-home-1920:url({headerHome1920});--header-home-1280:url({headerHome1280});--header-home-1024:url({headerHome1024});"
-    >
+    <section id="hero" class="relative" style="">
         <div
-            class="flex flex-col md:flex-row md:items-center container mx-auto px-8 md:px-4 py-8 sm:py-12 md:py-32 relative"
+            class="flex flex-col md:items-center container mx-auto px-8 md:px-4 pt-8 md:pt-20 relative"
         >
             <div
-                class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-lightest md:text-lg"
+                class="md:w-1/2 px-3 mb-4 md:mb-0 text-center text-gray-lightest md:text-lg"
             >
-                <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">
-                    Learn Together.
-                </p>
-                <p class="md:pr-16">
+                <h1 class="text-3xl font-bold mb-6 md:text-4xl text-white">
+                    Learn Languages In Groups.
+                </h1>
+                <p class="text-lg text-gray-lightest pt-4">
                     Everglot is a place for language learners and polyglots to
                     support each other along their language learning journeys.
                 </p>
             </div>
             <div class="md:w-1/2">
-                <div class="p-6 z-10">
+                <div class="hero-buttons text-center p-6 z-10">
                     <ButtonLarge
                         href="#footer-cta"
                         className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
-                        >Join now!</ButtonLarge
+                        >Join now</ButtonLarge
                     >
                     <ButtonLarge
                         variant="OUTLINED"
@@ -94,7 +94,7 @@
 
     <!-- USP -->
     <section
-        class="usp container md:max-w-4xl lg:max-w-4xl mx-auto py-8 sm:py-16 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0"
+        class="usp container md:max-w-4xl lg:max-w-4xl mx-auto py-8 sm:py-16 flex flex-col md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0"
     >
         <div
             class="md:w-1/2 flex justify-center md:justify-start px-4 py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16"
@@ -110,11 +110,11 @@
         <div
             class="md:w-1/2px-8 md:px-0 md:max-w-sm py-16 sm:py-0 mb-16 lg:mb-0"
         >
-            <p class="text-lg max-w-sm sm:mb-0m mb-4 text-center">
+            <p class="text-xl max-w-sm sm:mb-0m mb-4 text-center">
                 Language learning is a long-term journey. With any adventure, it
                 is important to find friends and companions along the way.
             </p>
-            <p class="text-lg max-w-sm text-center">
+            <p class="text-xl max-w-sm text-center">
                 Everglot provides the learning environment and tools to make
                 this happen.
             </p>
@@ -246,6 +246,20 @@
 </div>
 
 <style>
+    :global(#sapper::before) {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: var(--stars);
+        background-repeat: repeat;
+        background-position: -10px -26px;
+        background-size: 68%;
+        filter: contrast(70%) blur(1px);
+    }
+
     #hero {
         max-width: 1920px;
         margin: 0 auto;
@@ -270,9 +284,6 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: var(--header-home-1024, none);
-        background-repeat: no-repeat;
-        filter: blur(1px) brightness(40%);
         background-position: 34% 0%;
         @screen sm {
             background-position: 0% 0%;
@@ -295,6 +306,12 @@
         }
     }
 
+    .hero-buttons :global(a),
+    .hero-buttons :global(button) {
+        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+        text-transform: uppercase;
+    }
+
     h3 {
         @apply text-lg;
         @apply uppercase;
@@ -302,6 +319,10 @@
         @apply mb-2;
 
         font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    :global(p) {
+        font-size: 1.05rem;
     }
 
     section.usp {

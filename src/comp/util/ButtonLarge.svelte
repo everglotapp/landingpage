@@ -59,7 +59,9 @@
         a {
             @apply py-3 px-10 inline-flex rounded-xl font-bold cursor-pointer transition-colors;
 
-            font-family: "Noto Sans", "Helvetica", "Arial", "sans-serif";
+            /* font-family: "Noto Sans", "Helvetica", "Arial", "sans-serif"; */
+            font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
+            text-transform: uppercase;
         }
         button:disabled,
         button[disabled],

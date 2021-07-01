@@ -53,6 +53,20 @@
 </nav>
 
 <style>
+    nav {
+        @apply sticky;
+        @apply left-0;
+        @apply right-0;
+        @apply top-0;
+        @apply z-10;
+        @apply bg-secondary-dark;
+
+        @screen sm {
+            @apply relative;
+            @apply bg-transparent;
+        }
+    }
+
     li a[aria-current] {
         position: relative;
         display: inline-block;
@@ -75,13 +89,18 @@
 
     a {
         display: flex;
-        padding: 1rem 1rem;
+        padding: 1.5rem 1rem;
         text-decoration: none;
 
         @apply m-0;
         @apply text-gray-verylight;
         @apply uppercase;
         @apply text-sm;
+    }
+
+    li :global(a),
+    li :global(button) {
+        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
     }
 
     li:hover a {
