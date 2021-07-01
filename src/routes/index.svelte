@@ -296,60 +296,9 @@
         filter: contrast(70%) blur(1px);
     }
 
-    #hero {
-        max-width: 1920px;
-        margin: 0 auto;
-        max-width: 1024px;
-        max-height: 416px;
-        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
-
-        @screen lg {
-            max-width: 1280px;
-            max-height: 369px;
-        }
-        @screen xl {
-            max-width: 1920px;
-            max-height: 369px;
-        }
-    }
-
-    #hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-position: 34% 0%;
-        @screen sm {
-            background-position: 0% 0%;
-            filter: blur(1px) brightness(60%);
-            transform: none;
-        }
-        @screen lg {
-            background-image: var(--header-home-1280, none);
-            max-width: 1280px;
-            max-height: 369px;
-        }
-        @screen xl {
-            background-image: var(--header-home-1920, none);
-            max-width: 1920px;
-            max-height: 369px;
-        }
-        @screen 2xl {
-            background-repeat: repeat-x;
-            background-position: 242px;
-        }
-    }
-
     .hero-buttons :global(a),
     .hero-buttons :global(button) {
-        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
         text-transform: uppercase;
-    }
-
-    section.features {
-        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
     }
 
     section.features h3 {
@@ -358,8 +307,6 @@
         @apply font-bold;
         @apply text-center;
         @apply mb-8;
-
-        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
     }
 
     section.features .feature {
@@ -370,10 +317,6 @@
             @apply pt-16;
             @apply pb-16;
         }
-    }
-
-    section.usp {
-        font-family: Poppins, Verdana, Geneva, Tahoma, sans-serif;
     }
 
     section.features .feature-image-container {

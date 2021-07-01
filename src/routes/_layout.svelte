@@ -41,5 +41,6 @@
         box-sizing: border-box;
 
         @apply text-gray-lightest;
+        @apply font-sans;
     }
 </style>
