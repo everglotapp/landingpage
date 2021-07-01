@@ -1,7 +1,7 @@
 <script lang="ts">
     import ButtonLarge from "../comp/util/ButtonLarge.svelte"
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte"
-    import heart from "images/heart.svg"
+    // import heart from "images/heart.svg"
     import headerHome1920 from "images/header-home-1920.jpg"
     import headerHome1280 from "images/header-home-1280.jpg"
     import headerHome1024 from "images/header-home-1024.jpg"
@@ -47,7 +47,7 @@
 </script>
 
 <svelte:head>
-    <title>Everglot – The Language Community</title>
+    <title>Everglot – Learn Together.</title>
 </svelte:head>
 
 <ScrollDownArrow />
@@ -63,17 +63,11 @@
     >
         <div class="md:w-1/2 px-3 mb-4 md:mb-0 text-gray-lightest md:text-lg">
             <p class="text-xl font-bold mb-6 md:mb-3 md:text-2xl">
-                Perfect your language skills together with fellow polyglots.
+                Learn Together.
             </p>
             <p class="md:pr-16">
-                We <img
-                    src={heart}
-                    class="inline w-4 h-4"
-                    aria-label="red heart"
-                    alt="love"
-                /> all languages and strongly believe they shouldn't be scary.
+                Everglot is a place for language learners and polyglots to support each other along their language learning journeys. 
             </p>
-            <p class="md:pr-16">Everglot guides you towards mastery.</p>
         </div>
         <div class="md:w-1/2">
             <div class="p-6 z-10">
@@ -110,19 +104,12 @@
     </div>
 
     <div class="md:w-1/2 xl:w-2/3 px-8 md:px-0 py-16 sm:py-0 mb-16 lg:mb-0">
-        <h2 class="text-lg text-gray-dark font-bold mb-2">
-            Speaking a foreign tongue can be much easier.
-        </h2>
+
         <p class="mb-4 sm:mb-0">
-            Everglots are building the world's most <strong
-                class="text-gray-dark">welcoming</strong
-            > community around language learning.
+            Language learning is a long-term journey. With any adventure, it is important to find friends and companions along the way. 
         </p>
         <p>
-            Native speakers teach their languages to each other, helping those
-            who are struggling finally make <strong class="text-gray-dark"
-                >lasting progress</strong
-            >.
+            Everglot provides the learning environment and tools to make this happen. 
         </p>
     </div>
 </section>
@@ -150,10 +137,9 @@
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
-            <h3>Better than movies and textbooks</h3>
+            <h3>Practice language with native speakers and fellow learners</h3>
             <p>
-                It's hard to follow what people are saying? We've got you
-                covered, as live subtitles and amazing tutors are here to help.
+                Get the ball rolling with conversation prompts and role-play scenarios. Receive feedback and tips from native speakers.
             </p>
             <div class="feature-image-container">
                 <img src={books} alt="Library" />
@@ -165,10 +151,9 @@
         </div>
 
         <div class="md:w-1/3 mb-16 md:mb-0">
-            <h3>Invite your friends</h3>
+            <h3>Learn with the aid of games</h3>
             <p>
-                Everglot is you and your tandem partners' laid back place to
-                hang out. And the others are just as friendly.
+                Play language games with your fellow learners and make some new friends!
             </p>
             <div class="feature-image-container">
                 <img src={friends} alt="Friends" />
