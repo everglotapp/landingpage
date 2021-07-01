@@ -1,8 +1,9 @@
 <script lang="ts">
+    import ButtonLarge from "../util/ButtonLarge.svelte"
     export let segment: string | undefined
 </script>
 
-<nav class="flex container mx-auto px-2">
+<nav class="flex container mx-auto px-2 bg-secondary-dark">
     <ul class="flex flex-1">
         <li class="mr-2">
             <a
@@ -30,16 +31,23 @@
 				on:click|preventDefault=""
 			>Pricing</a>
 		</li> -->
-        <li class="ml-auto">
+        <!--<li class="ml-auto">
             <a
                 aria-current={segment === "about" ? "page" : undefined}
                 href="about"
                 class="text-gray-bitlight hover:bg-transparent cursor-not-allowed"
                 on:click|preventDefault>About</a
             >
+        </li>-->
+        <li class="ml-auto">
+            <a href="https://app.everglot.com/login">Login</a>
         </li>
         <li>
-            <a href="https://app.everglot.com/login">Login</a>
+            <ButtonLarge
+                href="/#footer-cta"
+                className="cta text-sm uppercase ml-2 mb-0"
+                >Join now</ButtonLarge
+            >
         </li>
     </ul>
 </nav>
@@ -69,20 +77,32 @@
         display: flex;
         padding: 1rem 1rem;
         text-decoration: none;
+
         @apply m-0;
-        @apply text-gray-bitdark;
+        @apply text-gray-verylight;
+        @apply uppercase;
+        @apply text-sm;
+    }
+
+    li:hover a {
+        @apply text-white;
     }
 
     a.logo {
-        @apply text-black;
+        filter: grayscale(1) brightness(8);
+    }
+
+    a.logo:hover {
+        background: transparent;
+    }
+
+    :global(.cta) {
+        @apply px-4 !important;
+        @apply py-2 !important;
     }
 
     li {
         display: flex;
         align-items: center;
-    }
-
-    li:hover a {
-        @apply bg-gray-verylight;
     }
 </style>

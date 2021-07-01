@@ -58,6 +58,8 @@
         button,
         a {
             @apply py-3 px-10 inline-flex rounded-xl font-bold cursor-pointer transition-colors;
+
+            font-family: "Noto Sans", "Helvetica", "Arial", "sans-serif";
         }
         button:disabled,
         button[disabled],
