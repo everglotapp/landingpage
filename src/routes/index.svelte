@@ -8,7 +8,7 @@
     import chat from "images/chat.png"
     import group from "images/group.png"
     import hangman from "images/hangman.png"
-    import chatGame from "images/chatGame.png"
+    import chatGame from "images/chat-game.png"
 
     import { BellIcon, ArrowDownIcon } from "svelte-feather-icons"
 
@@ -66,7 +66,8 @@
                 Learn Together.
             </p>
             <p class="md:pr-16">
-                Everglot is a place for language learners and polyglots to support each other along their language learning journeys. 
+                Everglot is a place for language learners and polyglots to
+                support each other along their language learning journeys.
             </p>
         </div>
         <div class="md:w-1/2">
@@ -93,7 +94,7 @@
     class="container md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto py-8 sm:py-16 flex flex-col-reverse md:flex-row justify-center items-center md:px-8 lg:px-16 xl:px-0"
 >
     <div
-        class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16"
+        class="md:w-1/2 xl:w-1/3 flex justify-center md:justify-start px-4 py-8 sm:py-0 md:px-auto mb-8 sm:mb-0 lg:mr-16"
     >
         <img
             id="chat"
@@ -104,12 +105,13 @@
     </div>
 
     <div class="md:w-1/2 xl:w-2/3 px-8 md:px-0 py-16 sm:py-0 mb-16 lg:mb-0">
-
         <p class="mb-4 sm:mb-0">
-            Language learning is a long-term journey. With any adventure, it is important to find friends and companions along the way. 
+            Language learning is a long-term journey. With any adventure, it is
+            important to find friends and companions along the way.
         </p>
         <p>
-            Everglot provides the learning environment and tools to make this happen. 
+            Everglot provides the learning environment and tools to make this
+            happen.
         </p>
     </div>
 </section>
@@ -139,7 +141,8 @@
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Practice language with native speakers and fellow learners</h3>
             <p>
-                Get the ball rolling with conversation prompts and role-play scenarios. Receive feedback and tips from native speakers.
+                Get the ball rolling with conversation prompts and role-play
+                scenarios. Receive feedback and tips from native speakers.
             </p>
             <div class="feature-image-container">
                 <img src={chatGame} alt="chatGame" />
@@ -153,7 +156,8 @@
         <div class="md:w-1/3 mb-16 md:mb-0">
             <h3>Learn with the aid of games</h3>
             <p>
-                Play language games with your fellow learners and make some new friends!
+                Play language games with your fellow learners and make some new
+                friends!
             </p>
             <div class="feature-image-container">
                 <img src={hangman} alt="hangman" />
@@ -246,6 +250,7 @@
             max-height: 369px;
         }
     }
+
     #hero::before {
         content: "";
         position: absolute;
@@ -277,11 +282,7 @@
             background-position: 242px;
         }
     }
-    #study-call {
-        @screen sm {
-            max-width: 340px;
-        }
-    }
+
     h3 {
         @apply text-lg;
         @apply uppercase;
@@ -289,6 +290,7 @@
         @apply font-bold;
         @apply mb-2;
     }
+
     section.features .feature-image-container {
         @apply my-6;
         @apply text-center;
@@ -308,6 +310,7 @@
             max-height: 296px;
         }
     }
+
     section.features .feature-image-container img {
         @apply self-start;
         @apply max-w-full;
