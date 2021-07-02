@@ -76,7 +76,7 @@
                 class="md:w-1/2 px-3 mb-4 md:mb-0 text-center text-gray-lightest md:text-lg"
             >
                 <h1 class="text-3xl font-bold mb-6 md:text-4xl text-white">
-                    Learn Languages In Groups.
+                    Learn Languages together with fellow learners and native speakers.
                 </h1>
                 <p class="text-lg text-gray-lightest pt-4">
                     Everglot is a place for language learners and polyglots to
@@ -149,9 +149,6 @@
                             alt="You are sorted into groups based on your language skills"
                             style="margin-top: -74px; margin-bottom: 24px;"
                         />
-                        <div class="md:text-right text-xl md:pr-24">
-                            <p>Tell us what you need...</p>
-                        </div>
                     </div>
                     <div class="md:w-1/3 feature-image-container">
                         <img
@@ -160,7 +157,7 @@
                             class="shadow-md mb-8"
                         />
                         <div class="md:text-right text-xl">
-                            <p>and we’ll find you a suitable study group.</p>
+                            <p>Tell us what you need and we’ll find you a suitable study group.</p>
                         </div>
                     </div>
                 </div>
