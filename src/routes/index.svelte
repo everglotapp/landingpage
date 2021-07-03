@@ -305,6 +305,10 @@
 </div>
 
 <style>
+    #sapper {
+        min-height: 100vh;
+    }
+
     :global(#sapper::before) {
         content: "";
         position: absolute;
