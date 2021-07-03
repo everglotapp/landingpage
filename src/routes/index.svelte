@@ -305,7 +305,7 @@
 </div>
 
 <style>
-    #sapper {
+    :global(#sapper) {
         min-height: 100vh;
     }
 
