@@ -275,26 +275,13 @@
                         ></ButtonLarge
                     >
                 </form>
-                {#if false}
-                    <div
-                        class="py-4 font-bold text-lg"
-                        class:hidden={!subscriptionSuccess}
-                    >
-                        Thanks for your subscription, please make sure to
-                        confirm it in the mail we just sent you!
-                    </div>
-                    <div class="flex flex-col md:flex-row hidden">
-                        <input type="email" class="py-4 px-4 m-2 rounded-md" />
-                        <ButtonLarge
-                            tag="button"
-                            on:click={onSubscribe}
-                            disabled={subscribing ||
-                                typeof subscriptionSuccess !== "undefined"}
-                            className="w-full justify-center text-lg md:w-auto mb-3 md:mb-0 md:mr-1"
-                            >Subscribe with Google</ButtonLarge
-                        >
-                    </div>
-                {/if}
+                <div
+                    class="py-4 font-bold text-lg"
+                    class:hidden={!subscriptionSuccess}
+                >
+                    Thanks for your subscription, we will notify you as soon as
+                    you can join the early access!
+                </div>
             {:else}
                 <p class="font-bold text-2xl md:text-center text-gray-lightest">
                     Click this button to sign up for free!
