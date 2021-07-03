@@ -216,14 +216,14 @@
     <p>
         Falls Sie über unseren Internetauftritt ein Kundenkonto bei uns anlegen,
         werden wir die von Ihnen bei der Registrierung eingegebenen Daten (also
-        bspw. Ihren Namen, Ihre Anschrift oder Ihre E-Mail-Adresse)
-        ausschließlich für vorvertragliche Leistungen, für die Vertragserfüllung
-        oder zum Zwecke der Kundenpflege (bspw. um Ihnen eine Übersicht über
-        Ihre bisherigen Bestellungen bei uns zur Verfügung zu stellen oder um
-        Ihnen die sog. Merkzettelfunktion anbieten zu können) erheben und
-        speichern. Gleichzeitig speichern wir dann die IP-Adresse und das Datum
-        Ihrer Registrierung nebst Uhrzeit. Eine Weitergabe dieser Daten an
-        Dritte erfolgt natürlich nicht.
+        bspw. Ihren Benutzernamen, Ihre E-Mail-Adresse, Ihr Geschlecht oder Ihre
+        Zeitzone) ausschließlich für vorvertragliche Leistungen, für die
+        Vertragserfüllung oder zum Zwecke der Kundenpflege (bspw. um Ihnen eine
+        Übersicht über Ihre bisherigen Bestellungen bei uns zur Verfügung zu
+        stellen oder um Ihnen die sog. Merkzettelfunktion anbieten zu können)
+        erheben und speichern. Gleichzeitig speichern wir dann die IP-Adresse
+        und das Datum Ihrer Registrierung nebst Uhrzeit. Eine Weitergabe dieser
+        Daten an Dritte erfolgt natürlich nicht.
     </p>
     <p>
         Im Rahmen des weiteren Anmeldevorgangs wird Ihre Einwilligung in diese

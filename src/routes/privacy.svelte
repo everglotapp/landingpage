@@ -193,14 +193,14 @@
     <h4>Customer account/registration</h4>
     <p>
         If you create a customer account with us via our website, we will use
-        the data you entered during registration (e.g. your name, your address,
-        or your email address) exclusively for services leading up to your
-        potential placement of an order or entering some other contractual
-        relationship with us, to fulfill such orders or contracts, and to
-        provide customer care (e.g. to provide you with an overview of your
-        previous orders or to be able to offer you a wishlist function). We also
-        store your IP address and the date and time of your registration. This
-        data will not be transferred to third parties.
+        the data you entered during registration (e.g. your username, your email
+        address, your gender or your timezone) exclusively for services leading
+        up to your potential placement of an order or entering some other
+        contractual relationship with us, to fulfill such orders or contracts,
+        and to provide customer care (e.g. to provide you with an overview of
+        your previous orders or to be able to offer you a wishlist function). We
+        also store your IP address and the date and time of your registration.
+        This data will not be transferred to third parties.
     </p>
     <p>
         During the registration process, your consent will be obtained for this
