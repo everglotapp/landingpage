@@ -148,7 +148,7 @@
                         <img
                             src={groupSort}
                             alt="You are sorted into groups based on your language skills"
-                            style="margin-top: -74px; max-height: 540px;"
+                            style="max-height: 540px;"
                             class="mx-auto"
                         />
                         <div
