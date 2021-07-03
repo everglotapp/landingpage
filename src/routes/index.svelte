@@ -76,7 +76,8 @@
                 class="md:w-1/2 px-3 mb-4 md:mb-0 text-center text-gray-lightest md:text-lg"
             >
                 <h1 class="text-3xl font-bold mb-6 md:text-4xl text-white">
-                    Learn Languages together with fellow learners and native speakers.
+                    Learn languages together with fellow learners and native
+                    speakers.
                 </h1>
                 <p class="text-lg text-gray-lightest pt-4">
                     Everglot is a place for language learners and polyglots to
@@ -143,22 +144,29 @@
             <div class="feature mb-16 md:mb-0">
                 <h3>Find a study group that fits your goals and schedule</h3>
                 <div class="flex flex-col md:flex-row">
-                    <div class="md:w-2/3 feature-image-container group-sort">
+                    <div class="md:w-3/5 feature-image-container group-sort">
                         <img
                             src={groupSort}
                             alt="You are sorted into groups based on your language skills"
-                            style="margin-top: -74px; margin-bottom: 24px;"
+                            style="margin-top: -74px; max-height: 540px;"
+                            class="mx-auto"
                         />
+                        <div
+                            class="text-center md:absolute md:left-0 md:right-0 md:mt-16 text-xl"
+                        >
+                            <p>
+                                Tell us what you need and we’ll find you a
+                                suitable study group.
+                            </p>
+                        </div>
                     </div>
-                    <div class="md:w-1/3 feature-image-container">
+                    <div class="md:w-2/5 feature-image-container">
                         <img
                             src={group}
                             alt="Your study group is divided into native speakers and learners"
-                            class="shadow-md mb-8"
+                            class="shadow-md mb-8 md:ml-0 mr-auto"
+                            style="max-height: 540px;"
                         />
-                        <div class="md:text-right text-xl">
-                            <p>Tell us what you need and we’ll find you a suitable study group.</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -193,22 +201,23 @@
             <div class="feature mb-16 md:mb-0">
                 <h3>Learn with the aid of games</h3>
                 <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/2 feature-image-container">
+                    <div class="md:w-2/5 feature-image-container">
                         <img
                             src={hangman}
                             alt="hangman"
-                            class="shadow-md mb-8 md:ml-auto md:mr-24"
+                            class="shadow-md mb-8 md:mx-auto"
+                            style="max-height: 480px;"
                         />
                         <div class="text-center text-xl">
                             <p class="text-xl">Language Games</p>
                         </div>
                     </div>
-                    <div class="md:w-1/2 feature-image-container">
+                    <div class="md:w-3/5 feature-image-container">
                         <img
                             src={liveAudio}
                             alt="Everglot allows voice chats"
-                            class="mb-8"
-                            style="margin-top: 32px;"
+                            class="mb-8 md:mx-auto"
+                            style="max-height: 480px;"
                         />
                         <div class="text-center text-xl">
                             <p class="text-xl">Live Audio</p>
@@ -222,7 +231,7 @@
     <!-- CTA -->
     <section id="footer-cta" class="relative" style="--footer-cta-bg:url('')">
         <div
-            class="flex flex-col md:items-center space-y-2 md:space-y-4 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:py-32 relative"
+            class="flex flex-col md:items-center space-y-2 md:space-y-4 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:pt-0 md:pb-32 relative"
         >
             {#if $inviteToken === null}
                 <p class="font-bold text-2xl md:text-center text-gray-lightest">
@@ -341,8 +350,8 @@
         @apply pb-8;
 
         @screen md {
-            @apply pt-16;
-            @apply pb-16;
+            @apply pt-24;
+            @apply pb-24;
         }
     }
 
