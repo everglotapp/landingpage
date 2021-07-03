@@ -9,29 +9,16 @@
     <div
         class="flex self-center items-baseline sm:space-x-2 sm:justify-start flex-col-reverse sm:flex-row mt-8 sm:mt-0"
     >
-        <span class="mt-2 sm:mt-0">&copy; 2021 Everglot.</span><span
-            class="text-gray-bitlight text-sm"
-            >Squirrel image made by <a
-                href="https://www.flaticon.com/authors/smashicons"
-                title="Smashicons"
-                class="font-normal">Smashicons</a
-            >
-            from
-            <a
-                href="https://www.flaticon.com/"
-                title="Flaticon"
-                class="font-normal">www.flaticon.com</a
-            >. Face icons made by
-            <a
-                href="https://www.joypixels.com"
-                title="EmojiOne"
-                class="font-normal">EmojiOne</a
-            >.</span
-        >
+        <span class="mt-2 sm:mt-0">&copy; 2021 Everglot.</span>
     </div>
     <div
         class="flex self-center sm:space-x-8 sm:justify-end flex-col sm:flex-row"
     >
+        <a
+            href="/attribution"
+            aria-current={segment === "attribution" ? "page" : undefined}
+            >Attribution</a
+        >
         <a
             href="/privacy"
             aria-current={segment === "privacy" || segment === "datenschutz"
@@ -50,9 +37,5 @@
     a {
         @apply text-gray-verylight;
         @apply mb-3;
-    }
-
-    a[aria-current] {
-        @apply text-primary;
     }
 </style>
