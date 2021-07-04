@@ -36,6 +36,10 @@
 {/if}
 
 <style>
+    :global(#sapper) {
+        min-height: 100vh;
+    }
+
     main {
         position: relative;
         box-sizing: border-box;

@@ -88,7 +88,7 @@
                 <div class="hero-buttons text-center p-6 z-10">
                     <ButtonLarge
                         href={$inviteToken === null
-                            ? "#footer-cta"
+                            ? "#join"
                             : `${APP_BASE_URL}/join?token=${$inviteToken}`}
                         className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
                         >Join now</ButtonLarge
@@ -229,7 +229,7 @@
     </section>
 
     <!-- CTA -->
-    <section id="footer-cta" class="relative" style="--footer-cta-bg:url('')">
+    <section id="join" class="relative">
         <div
             class="flex flex-col md:items-center space-y-2 md:space-y-4 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:pt-0 md:pb-32 relative"
         >
@@ -305,10 +305,6 @@
 </div>
 
 <style>
-    :global(#sapper) {
-        min-height: 100vh;
-    }
-
     :global(#sapper::before) {
         content: "";
         position: absolute;

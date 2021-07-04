@@ -53,7 +53,7 @@
         <li>
             <ButtonLarge
                 href={$inviteToken === null
-                    ? "/#footer-cta"
+                    ? "/#join"
                     : `${APP_BASE_URL}/join?token=${$inviteToken}`}
                 className="cta text-sm uppercase ml-2 mb-0 whitespace-nowrap"
                 >Join now</ButtonLarge
