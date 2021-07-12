@@ -10,6 +10,13 @@
     <PageTitle>Attribution</PageTitle>
 
     <p>
+        App Store® and the Apple logo® are trademarks of Apple Inc., registered
+        in the U.S. and other countries.
+    </p>
+
+    <p>Google Play and the Google Play logo are trademarks of Google LLC.</p>
+
+    <p>
         Squirrel image was made by <a
             href="https://www.flaticon.com/authors/smashicons"
             title="Smashicons">Smashicons</a
