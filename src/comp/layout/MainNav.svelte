@@ -1,8 +1,7 @@
 <script lang="ts">
     import ButtonLarge from "../util/ButtonLarge.svelte"
 
-    import { inviteToken } from "../../stores"
-    import { APP_BASE_URL } from "../../constants"
+    import { linkToCta, linkToLogin } from "../../stores"
 
     export let segment: string | undefined
 </script>
@@ -44,17 +43,11 @@
             >
         </li>-->
         <li class="ml-auto">
-            <a
-                href={$inviteToken === null
-                    ? `${APP_BASE_URL}/login`
-                    : `${APP_BASE_URL}/login?token=${$inviteToken}`}>Login</a
-            >
+            <a href={$linkToLogin}>Login</a>
         </li>
         <li>
             <ButtonLarge
-                href={$inviteToken === null
-                    ? "/#join"
-                    : `${APP_BASE_URL}/join?token=${$inviteToken}`}
+                href={$linkToCta}
                 className="cta text-sm uppercase ml-2 mb-0 whitespace-nowrap"
                 >Join now</ButtonLarge
             >

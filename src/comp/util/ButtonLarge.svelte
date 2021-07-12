@@ -29,6 +29,7 @@
     export let tag: keyof HTMLElementTagNameMap = "a"
     export let href: string = ""
     export let type: string = "button"
+    export let target: string | undefined = undefined
     export let disabled: boolean = false
     $: computedClasses = CLASSES[variant][color]
     export let className: string = ""
@@ -47,6 +48,7 @@
     <a
         class={`${computedClasses} ${className}`}
         {href}
+        {target}
         disabled={disabled ? true : undefined}
     >
         <slot />
