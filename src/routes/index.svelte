@@ -1,9 +1,18 @@
 <script lang="ts">
     import { onMount } from "svelte"
-    import { BellIcon, ArrowDownIcon, ArrowUpIcon } from "svelte-feather-icons"
+    import { v4 as uuidv4 } from "uuid"
+    import {
+        BellIcon,
+        ArrowDownIcon,
+        ArrowUpIcon,
+        ArrowRightIcon,
+    } from "svelte-feather-icons"
 
     import ButtonLarge from "../comp/util/ButtonLarge.svelte"
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte"
+    import EscapeKeyListener from "../comp/util/EscapeKeyListener.svelte"
+    import ClickAwayListener from "../comp/util/ClickAwayListener.svelte"
+    import Modal from "../comp/util/Modal.svelte"
     import chat from "images/chat.png"
     import group from "images/group.png"
     import groupSort from "images/group-sort.png"
@@ -57,6 +66,22 @@
             )
         }
     })
+
+    const testflightExplanationModalId = uuidv4()
+    let showTestflightExplanationModal = false
+    let reactToClickaways = false
+    function handleTestlightClick() {
+        showTestflightExplanationModal = true
+    }
+    function handleClickAway() {
+        if (!reactToClickaways) {
+            // ignore first time bug
+            reactToClickaways = true
+            return
+        }
+        showTestflightExplanationModal = false
+        reactToClickaways = false
+    }
 </script>
 
 <svelte:head>
@@ -288,8 +313,9 @@
                     class="flex flex-col gap-y-2 mx-auto mb-1"
                     style="max-width: 500px;"
                 >
-                    <a
+                    <button
                         href="https://testflight.apple.com/join/ZvjofjHo"
+                        on:click={handleTestlightClick}
                         target="_blank"
                         ><svg
                             id="livetype"
@@ -430,7 +456,7 @@
                                 </g>
                             </g>
                         </svg>
-                    </a>
+                    </button>
                     <a
                         href="https://play.google.com/store/apps/details?id=com.everglot"
                         target="_blank"
@@ -462,6 +488,62 @@
         </div>
     </section>
 </div>
+{#if showTestflightExplanationModal}
+    <Modal>
+        <div
+            id={testflightExplanationModalId}
+            class="py-4 px-4 md:py-8 md:px-10 shadow-lg rounded-lg max-w-md"
+            style="background: #253035;"
+        >
+            <ClickAwayListener
+                elementId={testflightExplanationModalId}
+                on:clickaway={handleClickAway}
+            />
+            <EscapeKeyListener
+                on:keydown={() => (showTestflightExplanationModal = false)}
+            />
+            <p class="mb-6 text-xl text-center font-bold">
+                Thank you so much for your interest in Everglot!
+            </p>
+            <p class="mb-6 text-center text-lg">
+                If you have an Apple device please first <a
+                    class="flex my-1 font-bold text-2xl text-primary justify-between items-center"
+                    href="https://itunes.apple.com/us/app/testflight/id899247664?mt=8"
+                    target="_blank"
+                    >install Apple's own TestFlight® app<ArrowRightIcon
+                        size="32"
+                    />
+                </a>
+            </p>
+            <p class="mb-6 text-center text-lg">
+                Only then will you be able to download the Everglot beta version
+                below.
+            </p>
+            <div class="flex items-center mx-auto">
+                <ButtonLarge
+                    variant="FILLED"
+                    color="PRIMARY"
+                    className="w-full justify-center items-center"
+                    href="https://testflight.apple.com/join/ZvjofjHo"
+                    target="_blank"
+                    ><span style="text-transform: none;"
+                        >Download <img
+                            src="/logo-192.png"
+                            alt="Everglot"
+                            style="filter: grayscale(1) brightness(8);
+                            height: 20px;
+                            display: inline;
+                            margin-left: .175rem;
+                            margin-right: .175rem;"
+                            class="text-base"
+                        />
+                        for iOS</span
+                    ></ButtonLarge
+                >
+            </div>
+        </div></Modal
+    >
+{/if}
 
 <style>
     :global(#sapper::before) {
