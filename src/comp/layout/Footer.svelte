@@ -25,7 +25,7 @@
                 ? "page"
                 : undefined}>Privacy</a
         >
-        <span class="cursor-not-allowed mb-3">Imprint</span>
+        <!--<span class="cursor-not-allowed mb-3">Imprint</span>-->
     </div>
 </footer>
 
