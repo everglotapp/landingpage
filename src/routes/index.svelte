@@ -311,8 +311,7 @@
                     <ArrowDownIcon size="24" class="mx-auto" />
                 </div>
                 <div
-                    class="flex flex-col gap-y-2 mx-auto mb-1"
-                    style="max-width: 500px;"
+                    class="flex flex-col md:flex-row justify-center items-center gap-y-2 mx-auto mb-1"
                 >
                     <button
                         href="https://testflight.apple.com/join/ZvjofjHo"
@@ -461,6 +460,7 @@
                     <a
                         href="https://play.google.com/store/apps/details?id=com.everglot"
                         target="_blank"
+                        class="my-0"
                         ><img
                             src="/google-play-badge.png"
                             alt="Download Everglot for Android"
