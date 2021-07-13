@@ -249,7 +249,8 @@
     </section>
 
     <!-- CTA -->
-    <section id="join" class="relative">
+    <section class="relative">
+        <div id="join" class="absolute" style="top: -12vh;" />
         <div
             class="flex flex-col md:items-center space-y-2 md:space-y-4 container mx-auto px-4 md:px-8 py-8 sm:py-12 md:pt-0 md:pb-32 relative"
         >
@@ -473,9 +474,9 @@
                 <p
                     class="pt-8 md:pt-4 font-bold text-2xl md:text-center text-gray-lightest"
                 >
-                    Or click this button to sign up for free!
+                    Or click the below button to sign up on the web.
                 </p>
-                <div class="flex flex-col md:flex-row items-end py-8">
+                <div class="flex flex-col md:flex-row items-end pt-8 pb-2">
                     <ButtonLarge
                         href={$ctaLink}
                         color="PRIMARY"
@@ -484,6 +485,9 @@
                         >Join now</ButtonLarge
                     >
                 </div>
+                <p class="text-sm text-center text-gray-lightest">
+                    No credit card required.
+                </p>
             {/if}
         </div>
     </section>
