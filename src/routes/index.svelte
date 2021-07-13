@@ -485,9 +485,6 @@
                         >Join now</ButtonLarge
                     >
                 </div>
-                <p class="text-sm text-center text-gray-lightest">
-                    No credit card required.
-                </p>
             {/if}
         </div>
     </section>
