@@ -2,6 +2,7 @@
     import { scale } from "svelte/transition"
     import MainNav from "../comp/layout/MainNav.svelte"
     import Footer from "../comp/layout/Footer.svelte"
+    import LocaleProvider from "../comp/util/LocaleProvider.svelte"
 
     export let segment: string | undefined
 
@@ -12,28 +13,31 @@
         show = !show
     }
 
+    // @ts-ignore
     $: segment, change()
 </script>
 
-<MainNav {segment} />
+<LocaleProvider {segment}>
+    <MainNav {segment} />
 
-{#if show}
-    <main
-        in:scale={{ duration: timeout, delay: timeout }}
-        out:scale={{ duration: timeout }}
-    >
-        <slot />
-    </main>
-    <Footer {segment} />
-{:else}
-    <main
-        in:scale={{ duration: timeout, delay: timeout }}
-        out:scale={{ duration: timeout }}
-    >
-        <slot />
-    </main>
-    <Footer {segment} />
-{/if}
+    {#if show}
+        <main
+            in:scale={{ duration: timeout, delay: timeout }}
+            out:scale={{ duration: timeout }}
+        >
+            <slot />
+        </main>
+        <Footer {segment} />
+    {:else}
+        <main
+            in:scale={{ duration: timeout, delay: timeout }}
+            out:scale={{ duration: timeout }}
+        >
+            <slot />
+        </main>
+        <Footer {segment} />
+    {/if}
+</LocaleProvider>
 
 <style>
     :global(#sapper) {
