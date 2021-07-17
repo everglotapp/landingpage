@@ -3,7 +3,7 @@
 </script>
 
 <footer
-    class="container flex flex-col-reverse sm:flex-row sm:justify-between mx-auto py-4 md:py-8 px-8 space-y-2 md:space-y-0 text-gray-lightest"
+    class="container relative flex flex-col-reverse sm:flex-row sm:justify-between mx-auto py-4 md:py-8 px-8 space-y-2 md:space-y-0 text-gray-lightest"
     class:index={typeof segment === undefined}
 >
     <div
