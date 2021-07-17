@@ -7,4 +7,7 @@ index-hero-description = Everglot is a place for language learners and polyglots
 index-hero-button-join = Join now
 index-hero-button-login = Login
 
-index-
+index-usp-1 = Language learning is a long-term journey. With any adventure, it
+    is important to find friends and companions along the way.
+index-usp-2 = Everglot provides the learning environment and tools to make
+    this happen.
