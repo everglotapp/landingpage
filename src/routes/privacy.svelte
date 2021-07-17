@@ -328,42 +328,6 @@
             device.
         </p>
     </div>
-    <h4>Google Fonts</h4>
-    <p>
-        Our website uses Google Fonts to display external fonts. This is a
-        service provided by Google Ireland Limited, Gordon House, Barrow Street,
-        Dublin 4, Irland (hereinafter: Google).
-    </p>
-    <p>
-        To enable the display of certain fonts on our website, a connection to
-        the Google server in the USA is established whenever our website is
-        accessed.
-    </p>
-    <p>
-        The legal basis is Art. 6 Para. 1 lit. f) GDPR. Our legitimate interest
-        lies in the optimization and economic operation of our site.
-    </p>
-    <p>
-        When you access our site, a connection to Google is established from
-        which Google can identify the site from which your request has been sent
-        and to which IP address the fonts are being transmitted for display.
-    </p>
-    <p>Google offers detailed information at</p>
-    <p>
-        <a
-            href="https://adssettings.google.com/authenticated"
-            target="_blank"
-            rel="noopener">https://adssettings.google.com/authenticated</a
-        >
-    </p>
-    <p>
-        <a
-            href="https://policies.google.com/privacy"
-            target="_blank"
-            rel="noopener">https://policies.google.com/privacy</a
-        >
-    </p>
-    <p>in particular on options for preventing the use of data.</p>
     <p>
         <a
             href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html"

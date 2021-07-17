@@ -365,48 +365,6 @@
             die auf Ihrem Endgerät gespeicherten Cookies löschen.
         </p>
     </div>
-    <h4>Google Fonts</h4>
-    <p>
-        In unserem Internetauftritt setzen wir Google Fonts zur Darstellung
-        externer Schriftarten ein. Es handelt sich hierbei um einen Dienst der
-        Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland,
-        nachfolgend nur „Google“ genannt.
-    </p>
-    <p>
-        Um die Darstellung bestimmter Schriften in unserem Internetauftritt zu
-        ermöglichen, wird bei Aufruf unseres Internetauftritts eine Verbindung
-        zu dem Google-Server in den USA aufgebaut.
-    </p>
-    <p>
-        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes
-        Interesse liegt in der Optimierung und dem wirtschaftlichen Betrieb
-        unseres Internetauftritts.
-    </p>
-    <p>
-        Durch die bei Aufruf unseres Internetauftritts hergestellte Verbindung
-        zu Google kann Google ermitteln, von welcher Website Ihre Anfrage
-        gesendet worden ist und an welche IP-Adresse die Darstellung der Schrift
-        zu übermitteln ist.
-    </p>
-    <p>Google bietet unter</p>
-    <p>
-        <a
-            href="https://adssettings.google.com/authenticated"
-            target="_blank"
-            rel="noopener">https://adssettings.google.com/authenticated</a
-        >
-    </p>
-    <p>
-        <a
-            href="https://policies.google.com/privacy"
-            target="_blank"
-            rel="noopener">https://policies.google.com/privacy</a
-        >
-    </p>
-    <p>
-        weitere Informationen an und zwar insbesondere zu den Möglichkeiten der
-        Unterbindung der Datennutzung.
-    </p>
     <p>
         <a
             href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html"
