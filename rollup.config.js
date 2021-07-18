@@ -1,4 +1,5 @@
 import path from "path"
+import fs from "fs"
 import resolve from "@rollup/plugin-node-resolve"
 import replace from "@rollup/plugin-replace"
 import commonjs from "@rollup/plugin-commonjs"
@@ -8,6 +9,7 @@ import babel from "@rollup/plugin-babel"
 import { terser } from "rollup-plugin-terser"
 import typescript from "@rollup/plugin-typescript"
 import config from "sapper/config/rollup.js"
+import fluent from "./src/helpers/rollup-plugin-fluent"
 import pkg from "./package.json"
 
 const mode = process.env.NODE_ENV
@@ -51,6 +53,27 @@ export default {
             }),
             commonjs(),
             typescript({ sourceMap: dev }),
+            fluent({
+                include: "locales/**/*.ftl",
+            }),
+            ...(dev
+                ? [
+                      {
+                          buildStart() {
+                              const localesDir = path.resolve(
+                                  __dirname,
+                                  "./locales/"
+                              )
+                              const locales = fs.readdirSync(localesDir)
+                              locales.forEach((locale) => {
+                                  this.addWatchFile(
+                                      path.join(localesDir, locale, `page.ftl`)
+                                  )
+                              })
+                          },
+                      },
+                  ]
+                : []),
 
             legacy &&
                 babel({
@@ -113,6 +136,9 @@ export default {
             }),
             commonjs(),
             typescript({ sourceMap: dev }),
+            fluent({
+                include: "locales/**/*.ftl",
+            }),
         ],
         external: Object.keys(pkg.dependencies).concat(
             require("module").builtinModules

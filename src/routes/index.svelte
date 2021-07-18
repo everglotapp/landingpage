@@ -7,6 +7,7 @@
         ArrowUpIcon,
         ArrowRightIcon,
     } from "svelte-feather-icons"
+    import { Localized } from "@nubolab-ffwd/svelte-fluent"
 
     import ButtonLarge from "../comp/util/ButtonLarge.svelte"
     import ScrollDownArrow from "../comp/util/ScrollDownArrow.svelte"
@@ -70,7 +71,7 @@
     const testflightExplanationModalId = uuidv4()
     let showTestflightExplanationModal = false
     let reactToClickaways = false
-    function handleTestlightClick() {
+    function handleTestFlightClick() {
         showTestflightExplanationModal = true
     }
     function handleClickAway() {
@@ -100,12 +101,10 @@
                 class="md:w-1/2 md:px-3 mb-4 md:mb-0 text-center text-gray-lightest md:text-lg"
             >
                 <h1 class="text-3xl font-bold mb-6 md:text-4xl text-white">
-                    Learn languages together with fellow learners and native
-                    speakers.
+                    <Localized id="index-hero-slogan" />
                 </h1>
                 <p class="text-lg text-gray-lightest pt-4">
-                    Everglot is a place for language learners and polyglots to
-                    support each other along their language learning journeys.
+                    <Localized id="index-hero-description" />
                 </p>
             </div>
             <div class="md:w-1/2">
@@ -113,14 +112,14 @@
                     <ButtonLarge
                         href={$linkToCta}
                         className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
-                        >Join now</ButtonLarge
+                        ><Localized id="index-hero-button-join" /></ButtonLarge
                     >
                     <ButtonLarge
                         variant="OUTLINED"
                         color="SECONDARY"
                         href={$linkToLogin}
                         className="w-full justify-center md:w-auto"
-                        >Login</ButtonLarge
+                        ><Localized id="index-hero-button-login" /></ButtonLarge
                     >
                 </div>
             </div>
@@ -146,12 +145,10 @@
             class="md:w-1/2px-8 md:px-0 md:max-w-sm py-16 sm:py-0 mb-16 lg:mb-0 px-4"
         >
             <p class="text-xl max-w-sm sm:mb-0m mb-4 text-center">
-                Language learning is a long-term journey. With any adventure, it
-                is important to find friends and companions along the way.
+                <Localized id="index-usp-1" />
             </p>
             <p class="text-xl max-w-sm text-center">
-                Everglot provides the learning environment and tools to make
-                this happen.
+                <Localized id="index-usp-2" />
             </p>
         </div>
     </section>
@@ -315,7 +312,7 @@
                 >
                     <button
                         href="https://testflight.apple.com/join/ZvjofjHo"
-                        on:click={handleTestlightClick}
+                        on:click={handleTestFlightClick}
                         target="_blank"
                         ><svg
                             id="livetype"
