@@ -17,7 +17,7 @@ const port = Number(PORT)
 express()
     .use(
         compression({ threshold: 0 }),
-        sirv("static", { dev }),
+        sirv("static", { dev, etag: true, maxAge: 300 }),
         json(),
         sapper.middleware()
     )
