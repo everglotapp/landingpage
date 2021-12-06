@@ -1,5 +1,5 @@
 <script lang="ts">
-    import PageTitle from "../comp/typography/PageTitle.svelte"
+    import PageTitle from "../components/typography/PageTitle.svelte"
     export let status: number
     export let error: Error
 
