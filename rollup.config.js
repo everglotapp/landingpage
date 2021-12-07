@@ -132,6 +132,8 @@ export default {
                 emitFiles: false, // already emitted by client build
             }),
             resolve({
+                browser: false,
+                exportConditions: ["node"],
                 dedupe: ["svelte"],
             }),
             commonjs(),

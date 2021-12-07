@@ -3,6 +3,9 @@
   "description": "everglot.com landing page",
   "version": "0.0.1",
   "private": true,
+  "browser": {
+    "crypto": false
+  },
   "scripts": {
     "dev": "run-p watch:*",
     "watch:css": "postcss src/assets/global.pcss -o static/global.css -w",
