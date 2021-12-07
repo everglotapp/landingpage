@@ -1,4 +1,4 @@
-from node:15
+from node:16
 
 USER node
 RUN mkdir -p /home/node/app
