@@ -231,13 +231,13 @@
     <h4>Newsletter</h4>
     <p>
         If you register for our free newsletter, the data requested from you for
-        this purpose, i.e. your email address and, optionally, your name and
-        address, will be sent to us. We also store the IP address of your
-        computer and the date and time of your registration. During the
-        registration process, we will obtain your consent to receive this
-        newsletter and the type of content it will offer, with reference made to
-        this privacy policy. The data collected will be used exclusively to send
-        the newsletter and will not be passed on to third parties.
+        this purpose, i.e. your email address will be sent to us. We also store
+        the IP address of your computer and the date and time of your
+        registration. During the registration process, we will obtain your
+        consent to receive this newsletter and the type of content it will
+        offer, with reference made to this privacy policy. The data collected
+        will be used exclusively to send the newsletter and will not be passed
+        on to third parties.
     </p>
     <p>The legal basis for this is Art. 6 Para. 1 lit. a) GDPR.</p>
     <p>

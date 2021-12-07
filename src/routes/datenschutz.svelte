@@ -254,16 +254,15 @@
     <h4>Newsletter</h4>
     <p>
         Falls Sie sich für unseren kostenlosen Newsletter anmelden, werden die
-        von Ihnen hierzu abgefragten Daten, also Ihre E-Mail-Adresse sowie -
-        optional - Ihr Name und Ihre Anschrift, an uns übermittelt. Gleichzeitig
-        speichern wir die IP-Adresse des Internetanschlusses, von dem aus Sie
-        auf unseren Internetauftritt zugreifen, sowie Datum und Uhrzeit Ihrer
-        Anmeldung. Im Rahmen des weiteren Anmeldevorgangs werden wir Ihre
-        Einwilligung in die Übersendung des Newsletters einholen, den Inhalt
-        konkret beschreiben und auf diese Datenschutzerklärung verweisen. Die
-        dabei erhobenen Daten verwenden wir ausschließlich für den
-        Newsletter-Versand – sie werden deshalb insbesondere auch nicht an
-        Dritte weitergegeben.
+        von Ihnen hierzu abgefragten Daten, also Ihre E-Mail-Adresse, an uns
+        übermittelt. Gleichzeitig speichern wir die IP-Adresse des
+        Internetanschlusses, von dem aus Sie auf unseren Internetauftritt
+        zugreifen, sowie Datum und Uhrzeit Ihrer Anmeldung. Im Rahmen des
+        weiteren Anmeldevorgangs werden wir Ihre Einwilligung in die Übersendung
+        des Newsletters einholen, den Inhalt konkret beschreiben und auf diese
+        Datenschutzerklärung verweisen. Die dabei erhobenen Daten verwenden wir
+        ausschließlich für den Newsletter-Versand – sie werden deshalb
+        insbesondere auch nicht an Dritte weitergegeben.
     </p>
     <p>Rechtsgrundlage hierbei ist Art. 6 Abs. 1 lit. a) DSGVO.</p>
     <p>

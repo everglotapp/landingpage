@@ -27,6 +27,7 @@
     let email = ""
     let subscriptionSuccess: Boolean | undefined
     let subscribing = false
+    let consented = false
     function onSubscribe() {
         if ((document.forms["subscribe"] as HTMLFormElement).reportValidity()) {
             subscribing = true
@@ -262,36 +263,72 @@
                     <ArrowDownIcon size="24" class="text-gray mx-auto" />
                 </div>
                 <form
-                    class="flex flex-col md:flex-row items-end"
                     name="subscribe"
                     action="/subscribe"
                     on:submit|preventDefault={onSubscribe}
                 >
-                    <div class="inline-flex flex-col w-full">
-                        <label
-                            for="subscribe_email"
-                            class="font-bold text-gray-verylight">Email</label
+                    <div class="flex flex-col md:flex-row items-end">
+                        <div class="flex flex-col">
+                            <div class="inline-flex flex-col w-full">
+                                <label
+                                    for="subscribe_email"
+                                    class="font-bold text-gray-verylight"
+                                    >Email</label
+                                >
+                                <input
+                                    id="subscribe_email"
+                                    type="email"
+                                    required
+                                    placeholder="jane.doe@example.com"
+                                    class="border-none shadow-md mb-4 md:mb-0 md:mr-4 py-4 px-4 rounded-md w-full md:w-64"
+                                    bind:value={email}
+                                />
+                            </div>
+                            <div class="flex sm:hidden items-center mb-3">
+                                <input
+                                    id="subscribe_consented"
+                                    type="checkbox"
+                                    required
+                                    bind:checked={consented}
+                                />
+                                <label
+                                    for="subscribe_consented"
+                                    class="m-0 block text-gray-verylight"
+                                    >I would like to receive marketing updates
+                                    from Everglot. See&nbsp;<a href="/privacy"
+                                        >privacy policy</a
+                                    >.</label
+                                >
+                            </div>
+                        </div>
+                        <ButtonLarge
+                            tag="button"
+                            on:click={onSubscribe}
+                            disabled={subscribing ||
+                                typeof subscriptionSuccess !== "undefined"}
+                            className="w-full justify-center text-lg md:w-auto mb-3 md:mb-1 md:mr-1"
+                            type="submit"
+                            ><BellIcon size="24" class="mr-2" /><span
+                                style="line-height: 1.35">Subscribe</span
+                            ></ButtonLarge
                         >
-                        <input
-                            id="subscribe_email"
-                            type="email"
-                            required
-                            placeholder="jane.doe@example.com"
-                            class="border-none shadow-md mb-4 md:mb-0 md:mr-4 py-4 px-4 rounded-md w-full md:w-64"
-                            bind:value={email}
-                        />
                     </div>
-                    <ButtonLarge
-                        tag="button"
-                        on:click={onSubscribe}
-                        disabled={subscribing ||
-                            typeof subscriptionSuccess !== "undefined"}
-                        className="w-full justify-center text-lg md:w-auto mb-3 md:mb-1 md:mr-1"
-                        type="submit"
-                        ><BellIcon size="24" class="mr-2" /><span
-                            style="line-height: 1.35">Subscribe</span
-                        ></ButtonLarge
-                    >
+                    <div class="items-center mt-3 hidden sm:flex">
+                        <input
+                            id="subscribe_consented"
+                            type="checkbox"
+                            required
+                            bind:checked={consented}
+                        />
+                        <label
+                            for="subscribe_consented"
+                            class="m-0 block text-gray-verylight"
+                            >I would like to receive marketing updates from
+                            Everglot. See&nbsp;<a href="/privacy"
+                                >privacy policy</a
+                            >.</label
+                        >
+                    </div>
                 </form>
                 <div
                     class="py-4 font-bold text-lg"
