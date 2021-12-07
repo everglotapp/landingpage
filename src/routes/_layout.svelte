@@ -15,7 +15,6 @@
     if (typeof window !== "undefined") {
         const _paq = (window._paq = window._paq || [])
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(["trackPageView"])
         _paq.push(["enableLinkTracking"])
         ;(function () {
             _paq.push(["setTrackerUrl", TRACKER_URL])
