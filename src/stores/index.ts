@@ -17,3 +17,5 @@ export const ctaLink = derived(
             ? $linkToCta
             : `${APP_BASE_URL}/join?token=${$inviteToken}`
 )
+
+export const matomoInitialized = writable<boolean>(false)

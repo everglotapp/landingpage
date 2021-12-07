@@ -1,18 +1,31 @@
 <script context="module" lang="ts">
+    export const TRACKER_BASE_URL = "//internal-analytics.everglot.com/"
+    export const TRACKER_URL = TRACKER_BASE_URL + "matomo.php"
+    export const SITE_ID = "1"
+    function onLoaded(): any {
+        const tryInitializeMatomo = () => {
+            if (typeof window !== undefined && "Matomo" in window) {
+                matomoInitialized.set(true)
+            } else {
+                setTimeout(tryInitializeMatomo, 10)
+            }
+        }
+        tryInitializeMatomo()
+    }
     if (typeof window !== "undefined") {
         const _paq = (window._paq = window._paq || [])
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(["trackPageView"])
         _paq.push(["enableLinkTracking"])
         ;(function () {
-            const u = "//internal-analytics.everglot.com/"
-            _paq.push(["setTrackerUrl", u + "matomo.php"])
-            _paq.push(["setSiteId", "1"])
+            _paq.push(["setTrackerUrl", TRACKER_URL])
+            _paq.push(["setSiteId", SITE_ID])
             const d = document
             const g = d.createElement("script")
             const s = d.getElementsByTagName("script")[0]
             g.async = true
-            g.src = u + "matomo.js"
+            g.src = TRACKER_BASE_URL + "matomo.js"
+            g.onload = onLoaded()
             s.parentNode!.insertBefore(g, s)
         })()
     }
@@ -20,11 +33,26 @@
 
 <script lang="ts">
     import { scale } from "svelte/transition"
+    import { stores } from "@sapper/app"
     import MainNav from "../components/layout/MainNav.svelte"
     import Footer from "../components/layout/Footer.svelte"
     import LocaleProvider from "../components/util/LocaleProvider.svelte"
+    import { matomoInitialized } from "../stores"
 
     export let segment: string | undefined
+
+    const { page } = stores()
+    $: if ($page && $matomoInitialized) {
+        if (typeof window !== "undefined") {
+            const Matomo = window.Matomo
+            console.log({ Matomo, window, page: $page })
+            if (Matomo) {
+                const tracker = Matomo.getTracker(TRACKER_URL, SITE_ID)
+                console.log({ page, tracker, TRACKER_URL, SITE_ID })
+                tracker.trackPageView()
+            }
+        }
+    }
 
     const timeout = 150
     let show = true
