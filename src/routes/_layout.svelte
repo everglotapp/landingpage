@@ -45,10 +45,8 @@
     $: if ($page && $matomoInitialized) {
         if (typeof window !== "undefined") {
             const Matomo = window.Matomo
-            console.log({ Matomo, window, page: $page })
             if (Matomo) {
                 const tracker = Matomo.getTracker(TRACKER_URL, SITE_ID)
-                console.log({ page, tracker, TRACKER_URL, SITE_ID })
                 tracker.trackPageView()
             }
         }
