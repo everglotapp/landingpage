@@ -23,12 +23,14 @@
     import stars from "images/stars.png"
 
     import { inviteToken, linkToCta, linkToLogin, ctaLink } from "../stores"
+    import { trackEvent } from "./_helpers/analytics"
 
     let email = ""
     let subscriptionSuccess: Boolean | undefined
     let subscribing = false
     let consented = false
     function onSubscribe() {
+        trackEvent("Newsletter", "Subscribe")
         if ((document.forms["subscribe"] as HTMLFormElement).reportValidity()) {
             subscribing = true
             fetch("/subscribe/", {
@@ -83,6 +85,18 @@
         }
         showTestflightExplanationModal = false
         reactToClickaways = false
+    }
+
+    function handleConsentCheckboxChange(e: InputEvent) {
+        if (!e.target) {
+            return
+        }
+        trackEvent(
+            "Newsletter",
+            (e.target as HTMLInputElement).checked
+                ? "ConsentGranted"
+                : "ConsentRevoked"
+        )
     }
 </script>
 
@@ -288,8 +302,10 @@
                                 <input
                                     id="subscribe_consented"
                                     type="checkbox"
+                                    class="mr-2"
                                     required
                                     bind:checked={consented}
+                                    on:change={handleConsentCheckboxChange}
                                 />
                                 <label
                                     for="subscribe_consented"
@@ -317,8 +333,10 @@
                         <input
                             id="subscribe_consented"
                             type="checkbox"
+                            class="mr-2"
                             required
                             bind:checked={consented}
+                            on:change={handleConsentCheckboxChange}
                         />
                         <label
                             for="subscribe_consented"

@@ -24,3 +24,5 @@ services:
             POSTGRES_USER: "everglot_lp_user"
             POSTGRES_PASSWORD: "everglot_lp_pass"
             POSTGRES_DB: "everglot_lp_db"
+        ports:
+            - "127.0.0.1:5432:5432"

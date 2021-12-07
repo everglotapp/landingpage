@@ -1,10 +1,11 @@
 <script context="module" lang="ts">
-    export const TRACKER_BASE_URL = "//internal-analytics.everglot.com/"
-    export const TRACKER_URL = TRACKER_BASE_URL + "matomo.php"
-    export const SITE_ID = "1"
     function onLoaded(): any {
         const tryInitializeMatomo = () => {
-            if (typeof window !== undefined && "Matomo" in window) {
+            if (
+                typeof window !== undefined &&
+                "Matomo" in window &&
+                window.Matomo
+            ) {
                 matomoInitialized.set(true)
             } else {
                 setTimeout(tryInitializeMatomo, 10)
@@ -36,19 +37,15 @@
     import MainNav from "../components/layout/MainNav.svelte"
     import Footer from "../components/layout/Footer.svelte"
     import LocaleProvider from "../components/util/LocaleProvider.svelte"
-    import { matomoInitialized } from "../stores"
+    import { matomoInitialized, matomoStore } from "../stores"
+    import { SITE_ID, TRACKER_BASE_URL, TRACKER_URL } from "../constants"
+    import { trackPageView } from "./_helpers/analytics"
 
     export let segment: string | undefined
 
     const { page } = stores()
-    $: if ($page && $matomoInitialized) {
-        if (typeof window !== "undefined") {
-            const Matomo = window.Matomo
-            if (Matomo) {
-                const tracker = Matomo.getTracker(TRACKER_URL, SITE_ID)
-                tracker.trackPageView()
-            }
-        }
+    $: if ($page && $matomoStore) {
+        trackPageView()
     }
 
     const timeout = 150
