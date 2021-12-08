@@ -8,6 +8,14 @@ import { json } from "body-parser"
 const { NODE_ENV, HOST = "127.0.0.1", PORT = 3000 } = process.env
 const dev = NODE_ENV === "development"
 
+if (dev) {
+    const dotenv = require("dotenv")
+    const dotenvExpand = require("dotenv-expand")
+
+    const myEnv = dotenv.config()
+    dotenvExpand(myEnv)
+}
+
 const pool = createDatabasePool()
 pool.connect().then(() => {
     console.log("[Database Pool] Database connection established")

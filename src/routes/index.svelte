@@ -30,8 +30,12 @@
     let subscribing = false
     let consented = false
     function onSubscribe() {
-        trackEvent("Newsletter", "Subscribe")
-        if ((document.forms["subscribe"] as HTMLFormElement).reportValidity()) {
+        trackEvent("Newsletter", "ClickSubscribe")
+        if (
+            (
+                document.getElementById(formUuid) as HTMLFormElement
+            ).reportValidity()
+        ) {
             subscribing = true
             fetch("/subscribe/", {
                 method: "post",
@@ -60,7 +64,9 @@
         }
     }
 
+    let formUuid: string
     onMount(() => {
+        formUuid = uuidv4()
         document
             .getElementById("sapper")!
             .setAttribute("style", `--stars: url('${stars}');`)
@@ -87,15 +93,15 @@
         reactToClickaways = false
     }
 
-    function handleConsentCheckboxChange(e: InputEvent) {
-        if (!e.target) {
+    function handleConsentCheckboxChange(
+        e: Event & { currentTarget: EventTarget & HTMLInputElement }
+    ) {
+        if (!e.currentTarget) {
             return
         }
         trackEvent(
             "Newsletter",
-            (e.target as HTMLInputElement).checked
-                ? "ConsentGranted"
-                : "ConsentRevoked"
+            e.currentTarget.checked ? "CheckConsent" : "UncheckConsent"
         )
     }
 </script>
@@ -277,6 +283,7 @@
                     <ArrowDownIcon size="24" class="text-gray mx-auto" />
                 </div>
                 <form
+                    id={formUuid}
                     name="subscribe"
                     action="/subscribe"
                     on:submit|preventDefault={onSubscribe}

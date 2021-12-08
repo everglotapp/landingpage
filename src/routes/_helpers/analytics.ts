@@ -21,7 +21,7 @@ export function trackPageView() {
 type EventCategory = "Newsletter"
 
 type EventAction<T extends EventCategory> = T extends "Newsletter"
-    ? "ConsentGranted" | "ConsentRevoked" | "Subscribe"
+    ? "CheckConsent" | "UncheckConsent" | "ClickSubscribe"
     : never
 
 export function trackEvent<T extends EventCategory>(
