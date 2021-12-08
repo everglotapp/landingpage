@@ -18,12 +18,6 @@ export function trackPageView() {
     tracker.trackPageView()
 }
 
-type EventCategory = "Newsletter"
-
-type EventAction<T extends EventCategory> = T extends "Newsletter"
-    ? "CheckConsent" | "UncheckConsent" | "ClickSubscribe"
-    : never
-
 export function trackEvent<T extends EventCategory>(
     category: T,
     action: EventAction<T>,

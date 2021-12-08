@@ -3,6 +3,18 @@ interface Window {
     Matomo?: Matomo
 }
 
+type EventCategory = "Newsletter" | "MainNav" | "Hero"
+
+type CATEGORY_ACTIONS = {
+    Newsletter: "CheckConsent" | "UncheckConsent" | "ClickSubscribe"
+    MainNav: "ClickJoin" | "ClickLogin"
+    Hero: "ClickJoin" | "ClickLogin"
+}
+
+type EventAction<T extends EventCategory> = T extends keyof CATEGORY_ACTIONS
+    ? CATEGORY_ACTIONS[T]
+    : never
+
 interface MatomoTracker {
     // Log a page view
     trackPageView(customTitle?: string): void

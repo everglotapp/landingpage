@@ -2,6 +2,7 @@
     import ButtonLarge from "../util/ButtonLarge.svelte"
 
     import { linkToCta, linkToLogin } from "../../stores"
+    import { trackEvent } from "../../routes/_helpers/analytics"
 
     export let segment: string | undefined
 </script>
@@ -43,11 +44,15 @@
             >
         </li>-->
         <li class="ml-auto">
-            <a href={$linkToLogin}>Login</a>
+            <a
+                href={$linkToLogin}
+                on:click={() => trackEvent("MainNav", "ClickLogin")}>Login</a
+            >
         </li>
         <li>
             <ButtonLarge
                 href={$linkToCta}
+                on:click={() => trackEvent("MainNav", "ClickJoin")}
                 className="cta text-sm uppercase ml-2 mb-0 whitespace-nowrap"
                 >Join now</ButtonLarge
             >

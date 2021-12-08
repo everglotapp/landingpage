@@ -132,6 +132,7 @@
                 <div class="hero-buttons text-center p-6 z-10">
                     <ButtonLarge
                         href={$linkToCta}
+                        on:click={() => trackEvent("Hero", "ClickJoin")}
                         className="w-full justify-center md:w-auto mb-3 md:mb-0 md:mr-1 text-lg"
                         ><Localized id="index-hero-button-join" /></ButtonLarge
                     >
@@ -139,6 +140,7 @@
                         variant="OUTLINED"
                         color="SECONDARY"
                         href={$linkToLogin}
+                        on:click={() => trackEvent("Hero", "ClickLogin")}
                         className="w-full justify-center md:w-auto"
                         ><Localized id="index-hero-button-login" /></ButtonLarge
                     >

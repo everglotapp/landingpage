@@ -50,6 +50,7 @@
         {href}
         {target}
         disabled={disabled ? true : undefined}
+        on:click
     >
         <slot />
     </a>
