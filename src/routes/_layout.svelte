@@ -37,7 +37,7 @@
     import MainNav from "../components/layout/MainNav.svelte"
     import Footer from "../components/layout/Footer.svelte"
     import LocaleProvider from "../components/util/LocaleProvider.svelte"
-    import { matomoInitialized, matomoStore } from "../stores"
+    import { matomoInitialized, matomoStore } from "../stores/analytics"
     import { SITE_ID, TRACKER_BASE_URL, TRACKER_URL } from "../constants"
     import { trackPageView } from "./_helpers/analytics"
 

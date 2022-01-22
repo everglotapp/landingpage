@@ -72,8 +72,8 @@
         <code>mic</code>, <code>mic_off</code> and <code>bell</code> were made
         by
         <a href="https://twitter.com/colebemis">Cole Bemis</a>
-        as part of <a href="https://www.carbondesignsystem.com/">Feather</a>.
-        Licensed under the
+        as part of <a href="https://feathericons.com/">Feather</a>. Licensed
+        under the
         <a href="https://github.com/feathericons/feather/blob/master/LICENSE"
             >MIT</a
         >

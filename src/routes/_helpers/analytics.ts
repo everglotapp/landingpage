@@ -1,6 +1,6 @@
 import { get } from "svelte/store"
 import { SITE_ID, TRACKER_URL } from "../../constants"
-import { matomoStore } from "../../stores"
+import { matomoStore } from "../../stores/analytics"
 
 function getTracker(): MatomoTracker | null {
     const matomo = get(matomoStore)
