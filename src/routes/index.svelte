@@ -17,7 +17,7 @@
     import chat from "images/chat.png"
     import group from "images/group.png"
     import groupSort from "images/group-sort.png"
-    import chatGame from "images/chat-game.png"
+    import feed from "images/feed.png"
     import hangman from "images/hangman.png"
     import liveAudio from "images/live-audio.png"
     import stars from "images/stars.png"
@@ -181,7 +181,7 @@
         <div
             class="flex container flex-col mx-auto py-8 md:py-16 px-4 lg:px-8 gap-2 md:space-x-8"
         >
-            <div class="feature mb-16 md:mb-0">
+            <div class="feature mb-16 md:mb-4">
                 <h3>Find a study group that fits your goals and schedule</h3>
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-3/5 feature-image-container group-sort">
@@ -191,14 +191,6 @@
                             style="max-height: 540px;"
                             class="mx-auto"
                         />
-                        <div
-                            class="text-center md:absolute md:left-0 md:right-0 md:mt-16 text-xl"
-                        >
-                            <p>
-                                Tell us what you need and we’ll find you a
-                                suitable study group.
-                            </p>
-                        </div>
                     </div>
                     <div class="md:w-2/5 feature-image-container">
                         <img
@@ -213,33 +205,32 @@
 
             <div class="feature mb-16 md:mb-0">
                 <h3>
-                    Practice your target language with native speakers and
-                    fellow learners
+                    Create and share content in your target language with other
+                    learners and native speakers
                 </h3>
                 <div class="flex flex-col md:flex-row">
                     <div
                         class="md:w-1/3 md:text-center flex flex-col justify-center items-end px-4 md:px-0 md:pr-8"
                     >
                         <p class="text-xl" style="max-width: 300px;">
-                            Get the ball rolling with conversation prompts and
-                            role-play scenarios.
+                            Turn any content into language practice
                         </p>
                     </div>
                     <div class="md:w-1/3 feature-image-container">
-                        <img src={chatGame} alt="chatGame" />
+                        <img src={feed} alt="feed" />
                     </div>
                     <div
                         class="md:w-1/3 md:text-center flex flex-col justify-center items-start px-4 md:px-0 md:pl-8"
                     >
                         <p class="text-xl" style="max-width: 300px;">
-                            Receive feedback and tips from native speakers.
+                            Receive feedback and tips from native speakers
                         </p>
                     </div>
                 </div>
             </div>
 
             <div class="feature mb-16 md:mb-0">
-                <h3>Learn with the aid of games</h3>
+                <h3>Learn with the help of interactive games</h3>
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-2/5 feature-image-container">
                         <img
@@ -654,6 +645,11 @@
     section.features .feature-image-container img {
         @apply self-start;
         @apply max-w-full;
+    }
+
+    section.features .feature h3 {
+        @apply max-w-3xl;
+        @apply mx-auto;
     }
 
     .group-sort img {
