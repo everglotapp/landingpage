@@ -56,7 +56,7 @@
         license.
     </p>
     <p>
-        The <code>split-screen</code> icon was made by made by
+        The <code>split-screen</code> icon was made
         <a href="https://www.ibm.com/">IBM</a>
         as part of the
         <a href="https://www.carbondesignsystem.com/">Carbon Design System</a>.
@@ -64,6 +64,17 @@
         <a
             href="https://github.com/carbon-design-system/carbon/blob/main/LICENSE"
             >Apache 2.0</a
+        >
+        license.
+    </p>
+    <p>
+        The <code>arrow-back-thick-fill</code> icon was made
+        <a href="https://twitter.com/agwibawa">Arturo Wibawa</a>
+        as part of the
+        <a href="https://akaricons.com/">Akar Icons</a> icon library. Licensed
+        under the
+        <a href="https://github.com/artcoholic/akar-icons/blob/master/LICENSE"
+            >MIT</a
         >
         license.
     </p>
